@@ -1,0 +1,77 @@
+body
+{
+	background-color: #fafafa;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+.active {
+	border-bottom: 2px solid #000;
+	height: 0px;
+
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+	background-color: #2e81fa;
+}
+
+.navbar{
+	height: 113px;
+	background-color: #e9eaee;
+}
+
+/* slider */
+
+
+
+
+
+ .carousel-inner > .item > img {
+	width: 100%;
+	height:500px;
+ }
+
+ .carousel-inner {
+ 	height:500px;
+ 	width
+ }
+
+.discipline{
+	width: 50%;
+	cursor: pointer;
+	margin:0 auto;
+}
+
+
+
+.news{
+	height: 60px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #5a5a5a;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footer a{
+	color: white;
+}
+
+.btn-primary{
+	background-color: #2e81fa;
+}
