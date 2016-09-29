@@ -75,3 +75,55 @@ body
 .btn-primary{
 	background-color: #2e81fa;
 }
+/* Incription et tarifs */
+
+
+
+table {
+	text-align: center;
+}
+
+th {
+	text-align: center;
+}
+
+h2 {
+	color:#5a5a5a;
+}
+h3 {
+	color:#2e81fa;
+}
+
+.col1 {
+	width: 150px;
+}
+
+.col2 {
+	width: 200px;
+}
+
+.col3 {
+	width: 200px;
+}
+.col4 {
+	width: 200px;
+}
+
+strong {
+	font-weight: bold;
+}
+p {
+	margin-left: 20px;
+	padding-left: 10px;
+}
+
+.inscr {
+	border-style: solid;
+	background-color: #E9EAEE;
+	color: 5A5A5A;
+	padding: 10px;
+}
+
+
+
+
