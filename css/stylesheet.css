@@ -91,7 +91,7 @@ ul > li {
 }
 /* slider */
 
-
+	margin-top: -32px;
 
 
 
@@ -252,4 +252,23 @@ p {
 
 .newsright {
 	margin-top: -32px;
+	padding:10px;
 }
+
+.pad {
+	padding-top:130px;
+}
+
+#select form {
+	float:left;
+	padding:10px;
+}
+
+#select {
+	text-align: center;
+}
+
+.panelnews{
+	margin-top:100px;
+}
+

@@ -13,58 +13,57 @@
 
 <!-- navigation -->
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <img alt="Brand" class="pull-left" src="img/logo.png"><a class="navbar-brand" width="50%" height="50%" href="#">Dojo Beauceron</a>
-    </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="pull-left" src="img/logo.png"><a class="navbar-brand" id="title_logo" href="#">Dojo Beauceron</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="nav navbar-nav pull-right">
-        <li><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
-        <!--<li><a href="#">Link</a></li>-->
-        <li class="dropdown">
-          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités <span class="caret"></span></a>-->
-          <a href="#" class="active">Actualités <span class="caret sr-only">(current)</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Calendrier</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Le Club <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Horaires</a></li>
-            <li><a href="#">Inscriptions et Tarifs</a></li>
-            <li><a href="#">Dojos</a></li>
-            <li><a href="#">Historique</a></li>
-            <li><a href="#">Documents</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Résultats</a></li>
-        <li><a href="#">Contact</a></li>
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default">Rechercher</button>
-        </form>
-      </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Accueil</a></li>
 
+                <li class="dropdown">
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités <span class="caret"></span></a>-->
+                    <a href="#">Actualités <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Calendrier</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Le Club <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Horaires</a></li>
+                        <li><a href="#">Inscriptions et Tarifs</a></li>
+                        <li><a href="#">Dojos</a></li>
+                        <li><a href="#">Historique</a></li>
+                        <li><a href="#">Documents</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Résultats</a></li>
+                <li><a href="#">Contact</a></li>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Rechercher</button>
+                </form>
+            </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 <!-- Begin Body -->
-<div class="container">
+<div class="container pad">
     <div class="no-gutter row">
 
                 
@@ -95,7 +94,7 @@
                 </form>
                 </div>
 
-                <div class="panel-body">
+                <div class="panel-body panelnews">
 
                   <div id="newsmid">
                   <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
@@ -152,7 +151,7 @@
                     
                     <div class="newscontent">
                     <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div>
+                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
                     <br><br>
 
 
@@ -162,7 +161,7 @@
                     
                     <div class="newscontent">
                     <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div>
+                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
                     <br><br>
 
 
@@ -172,7 +171,7 @@
                     
                     <div class="newscontent">
                     <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div>
+                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
                     <br><br>
 
 
@@ -182,7 +181,7 @@
                     
                     <div class="newscontent">
                     <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div>
+                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
                     <br><br>
 
 
