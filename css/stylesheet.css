@@ -81,6 +81,7 @@ body
 
 table {
 	text-align: center;
+
 }
 
 th {
@@ -99,14 +100,14 @@ h3 {
 }
 
 .col2 {
-	width: 200px;
+	width: 190px;
 }
 
 .col3 {
-	width: 200px;
+	width: 190px;
 }
 .col4 {
-	width: 200px;
+	width: 190px;
 }
 
 strong {
