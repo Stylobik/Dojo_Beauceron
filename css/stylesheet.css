@@ -92,9 +92,12 @@ body
 
 .newsright > h2{
 	position:relative;
-	top:-50px;
+	top:125px;
 	margin:0;
-	background-color: #fff;
-	float:left;
+	background-color: rgba(255, 255, 255, 0.5);
+	float: left;	
 }
 
+.newsright {
+	margin-top: -32px;
+}
