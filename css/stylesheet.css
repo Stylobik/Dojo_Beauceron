@@ -1,28 +1,94 @@
 body
 {
 	background-color: #fafafa;
+	color:#000;
+    font-size:16px;
+	font-family:lane-narrow;
 }
+
+@font-face {
+	font-family:dekiru;
+	src:url(../fonts/dekiru.ttf);
+}
+
+@font-face{
+	font-family:lane-narrow;
+	src:url(../fonts/lane-narrow.ttf);
+}
+
+#title_logo{
+	font-family:dekiru;
+	font-size:30px;
+	margin-left:20px;
+    margin-top:30px;
+}
+
+#navbar > ul{
+	margin-top:30px;
+}
+
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu
 {
     display: block;
+
+}
+
+.dropdown-menu > li > a {
+
+
+
+}
+
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+    color: #fafafa;
+    background-color: #2e81fa;
 }
 
 .active {
 	border-bottom: 2px solid #000;
-	height: 0px;
+	height: 0;
 
 }
+
+.navbar-default:hover .navbar-nav:hover > .active:hover > a, .navbar-default:hover .navbar-nav:hover > .active:hover > a:focus, .navbar-default:hover .navbar-nav:hover > .active:hover > a:hover {
+	background-color: #3FA3D7;
+	color:#fff;
+}
+
+/* au hover on change la couleur de l'actif en bleu */
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
 	background-color: #2e81fa;
+    color: #fafafa;
+	height:83px;
 }
 
+/* couleur de l'actif par défaut */
+
+
+.navbar-default .navbar-nav > li > a, .navbar-inverse .navbar-text {
+	color: #2e81fa;
+}
+
+/* couleur de la navbar par défaut */
+
+.navbar-default:hover .navbar-nav:hover > li:hover > a, .navbar-inverse:hover .navbar-text:hover {
+	color: #fafafa;
+    background-color: #2e81fa;
+}
+
+/* couleur de la navbar au hover */
+
 .navbar{
-	height: 113px;
 	background-color: #e9eaee;
 }
 
+ul > li {
+	font-size:18px;
+
+}
 /* slider */
 
 
@@ -36,7 +102,6 @@ body
 
  .carousel-inner {
  	height:500px;
- 	width
  }
 
 .discipline{
@@ -46,13 +111,16 @@ body
 }
 
 
-
-.news{
+.article{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 	height: 60px;
-	overflow: hidden;
-	display: -webkit-box;
-	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+}
+
+#news{
+    padding-top:80px;
+    padding-bottom:80px;
 }
 
 .footer{
@@ -89,11 +157,6 @@ form [title="selecteurs"]
     width: 75%;
 }
 
-.select_elements
-{
-	
-}
-
 .search_bar
 {
 	width: 100%;
@@ -110,7 +173,17 @@ form [title="selecteurs"]
     box-shadow: 0px 10px 10px #5a5a5a;
 }
 
-.results_frame:
+.results_frame
 {
 	margin: 0px;
+	margin-top:20px;
+}
+
+.sport_detail {
+	display: none;
+}
+
+.sport_slideshow{
+    height:346px;
+    overflow-y: hidden;
 }
