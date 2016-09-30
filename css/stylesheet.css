@@ -234,6 +234,10 @@ p {
 	margin-bottom: 10px;
 }
 
+#newsmid:hover{
+	border:1px solid #2e81fa;
+}
+
 #newsmid p {
 	display:none;
 }
