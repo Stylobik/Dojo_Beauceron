@@ -27,7 +27,7 @@
 	$(document).ready(function() {
 
 		$('#calendar').fullCalendar({
-			defaultDate: '2016-09-12',
+			defaultDate: '2016-10-03',
 			editable: true,
 			eventLimit: true, // allow "more" link when too many events
 			events: [
@@ -72,33 +72,33 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <img alt="Brand" class="pull-left" src="img/logo.png"><a class="navbar-brand" width="50%" height="50%" href="#">Dojo Beauceron</a>
+      <img alt="Brand" class="pull-left" src="img/logo.png"><a class="navbar-brand" id="title_logo" href="index.html">Dojo Beauceron</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Accueil<span class="sr-only">(current)</span></a></li>
         <!--<li><a href="#">Link</a></li>-->
         <li class="dropdown">
           <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités <span class="caret"></span></a>-->
           <a href="#">Actualités <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Calendrier</a></li>
+            <li><a href="news.html">News</a></li>
+            <li class="active"><a href="calendrier.html">Calendrier</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#">Le Club <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Horaires</a></li>
-            <li><a href="#">Inscriptions et Tarifs</a></li>
+            <li><a href="Inscription_Tarifs.html">Inscriptions et Tarifs</a></li>
             <li><a href="#">Dojos</a></li>
             <li><a href="#">Historique</a></li>
             <li><a href="#">Documents</a></li>
           </ul>
         </li>
-        <li><a href="#">Résultats</a></li>
+        <li><a href="resultats.html">Résultats</a></li>
         <li><a href="#">Contact</a></li>
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -110,6 +110,7 @@
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+ <div id="liseret"></div>
 </nav>
 
 <!-- TITRE PAGE-->
@@ -122,7 +123,14 @@
 
 <!-- CALENDRIER -->
 
-<div id='calendar'></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <div id='calendar'></div>
+        </div>
+    </div>
+</div>
+
 
 <!-- FOOTER -->
 
@@ -135,7 +143,7 @@
             <p>&copy; 2016, Dojo Beauceron, tous droits réservés</p>
             </div>
             <div class="col-xs-4">
-            <a href="#">Mentions légales</a>
+            <a href="mentions.html">Mentions légales</a>
             </div>
         </div>
     </div>

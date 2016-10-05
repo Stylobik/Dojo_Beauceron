@@ -95,10 +95,8 @@ ul > li {
 	font-size:1.8rem;
 
 }
+
 /* slider */
-
-
-
 
 
  .carousel-inner > .item > img {
@@ -258,6 +256,7 @@ p {
 
 .newsright {
 	margin-top: -32px;
+	padding:10px;
 }
 
 /* CALENDRIER */
@@ -348,4 +347,27 @@ p {
 }
 @media screen and (min-width:1200px) {
 
+
+
+}
+
+.mentions_legales{
+	text-align: center;
+	margin-bottom: 20px;
+
+.pad {
+	padding-top:130px;
+}
+
+#select form {
+	float:left;
+	padding:10px;
+}
+
+#select {
+	text-align: center;
+}
+
+.panelnews{
+	margin-top:100px;
 }
