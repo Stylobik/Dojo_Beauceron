@@ -276,7 +276,6 @@ p {
 	height:10px;
 	background-color:black;
 }
-
 /* Carousel Documents */
 .carousel-control {
   padding-top:10%;
@@ -297,7 +296,6 @@ h1 {
 .carousel {
 	height: 450px;
 }
-
 .btn {
 	margin-top:0.5rem;
 	font-size: 2rem;
@@ -368,8 +366,6 @@ h1 {
 }
 @media screen and (min-width:1200px) {
 
-
-
 }
 
 .mentions_legales {
@@ -392,4 +388,33 @@ h1 {
 
 .panelnews{
 	margin-top:100px;
+}
+
+/* Horaires */
+table {
+	margin-top:150px;
+}
+
+.col1H{
+	width:80px;
+}
+
+.col2H{
+	width: 150px;
+}
+
+.col3H{
+	width: 150px;
+}
+
+.col4H{
+	width: 150px;
+}
+
+.col5H{
+	width: 150px;
+}
+
+th{
+	font-weight: bold;
 }
