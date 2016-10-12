@@ -28,7 +28,7 @@ body
 	color:#2e81fa;
 }
 
-#navbar > ul{
+#navbar ul > li{
 	margin-top:3rem;
 }
 
@@ -299,10 +299,20 @@ h1 {
 }
 
 .btn {
-	margin-top:0.5rem;
 	font-size: 2rem;
 }
 
+.navbar-form{
+	margin-top:3.5rem;
+}
+
+#search {
+	height:43px;
+}
+
+.btn-primary {
+	background-color: #3FA3D7;
+}
 /* RESPONSIVE */
 
 /* APPARITION DU MENU HAMBURGER QUAND LA LARGEUR EST DE 1175 PX */
