@@ -3,32 +3,29 @@
 
     app.controller('dojoController',function(){
 
-
-    });
-
     app.directive('liens',function(){
         return {
-            restrict : 'E',
+            restrict : 'EA',
             name : 'liens',
-            templateUrl : '../../partials/common/liens.html'
+            templateUrl : '../partials/common/liens.html'
         }
     });
 
     app.directive('navigation',function(){
         return {
-            restrict : 'E',
+            restrict : 'EA',
             name : 'navigation',
-            templateUrl : '../../partials/common/navigation.html'
+            templateUrl : '../partials/common/navigation.html'
         }
     });
 
     app.directive('pied',function(){
         return {
-            restrict : 'E',
+            restrict : 'EA',
             name : 'pied',
-            templateUrl: '../../partials/common/pied.html'
+            templateUrl: '../partials/common/pied.html'
         }
     });
-
+ });
 })();
 
