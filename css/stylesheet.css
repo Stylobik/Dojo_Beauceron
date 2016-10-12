@@ -28,10 +28,9 @@ body
 	color:#2e81fa;
 }
 
-#navbar > ul{
+#navbar ul > li{
 	margin-top:3rem;
 }
-
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu
@@ -39,7 +38,6 @@ body
     display: block;
 
 }
-
 
 .dropdown-menu > li > a {
 
@@ -93,11 +91,9 @@ color:black;
 
 ul > li {
 	font-size:1.8rem;
-
 }
 
 /* slider */
-
 
  .carousel-inner > .item > img {
 	width: 100%;
@@ -113,7 +109,6 @@ ul > li {
 	cursor: pointer;
 	margin:0 auto;
 }
-
 
 .article{
     white-space: nowrap;
@@ -135,13 +130,17 @@ ul > li {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
+    line-height: 100px
 }
 
 .footer a{
 	color: white;
+	margin: 0;
+}
+
+.footer p{
+	color: white;
+	margin: 0;
 }
 
 .btn-primary{
@@ -251,7 +250,7 @@ p {
 	top:125px;
 	margin:0;
 	background-color: rgba(255, 255, 255, 0.5);
-	float: left;	
+	float: left;
 }
 
 .newsright {
@@ -276,31 +275,38 @@ p {
 	height:10px;
 	background-color:black;
 }
+
 /* Carousel Documents */
 .carousel-control {
   padding-top:10%;
   width:5%;
 }
-.well {
-	margin-top: 150px;
-}
+
 h1 {
 	color:#2e81fa;
 	text-align: center;
 	font-weight: bold;
-}
-.carousel-inner {
-	padding-top: 50px;
+	margin-bottom: 50px;
 }
 
 .carousel {
 	height: 450px;
 }
 .btn {
-	margin-top:0.5rem;
 	font-size: 2rem;
 }
 
+.navbar-form{
+	margin-top:3.5rem;
+}
+
+#search {
+	height:43px;
+}
+
+.btn-primary {
+	background-color: #3FA3D7;
+}
 /* RESPONSIVE */
 
 /* APPARITION DU MENU HAMBURGER QUAND LA LARGEUR EST DE 1175 PX */
@@ -373,6 +379,13 @@ h1 {
 	margin-bottom: 20px;
 }
 
+.legal_text {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
 .pad {
 	padding-top:130px;
 }
@@ -418,3 +431,14 @@ table {
 th{
 	font-weight: bold;
 }
+
+#map {
+    height: 300px;
+}
+
+#map:hover {
+    border:1px solid #2e81fa;
+}
+
+.padreset{padding:0;}
+
