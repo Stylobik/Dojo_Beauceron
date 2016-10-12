@@ -251,7 +251,7 @@ p {
 	top:125px;
 	margin:0;
 	background-color: rgba(255, 255, 255, 0.5);
-	float: left;	
+	float: left;
 }
 
 .newsright {
@@ -282,9 +282,7 @@ p {
   padding-top:10%;
   width:5%;
 }
-.well {
-	margin-top: 150px;
-}
+
 h1 {
 	color:#2e81fa;
 	text-align: center;
@@ -403,3 +401,13 @@ h1 {
 .panelnews{
 	margin-top:100px;
 }
+
+#map {
+    height: 300px;
+}
+
+#map:hover {
+    border:1px solid #2e81fa;
+}
+
+.padreset{padding:0;}
