@@ -28,7 +28,7 @@ body
 	color:#2e81fa;
 }
 
-#navbar > ul{
+#navbar ul > li{
 	margin-top:3rem;
 }
 
@@ -255,7 +255,7 @@ p {
 	top:125px;
 	margin:0;
 	background-color: rgba(255, 255, 255, 0.5);
-	float: left;	
+	float: left;
 }
 
 .newsright {
@@ -286,9 +286,7 @@ p {
   padding-top:10%;
   width:5%;
 }
-.well {
-	margin-top: 150px;
-}
+
 h1 {
 	color:#2e81fa;
 	text-align: center;
@@ -301,10 +299,20 @@ h1 {
 }
 
 .btn {
-	margin-top:0.5rem;
 	font-size: 2rem;
 }
 
+.navbar-form{
+	margin-top:3.5rem;
+}
+
+#search {
+	height:43px;
+}
+
+.btn-primary {
+	background-color: #3FA3D7;
+}
 /* RESPONSIVE */
 
 /* APPARITION DU MENU HAMBURGER QUAND LA LARGEUR EST DE 1175 PX */
@@ -402,3 +410,13 @@ h1 {
 .panelnews{
 	margin-top:100px;
 }
+
+#map {
+    height: 300px;
+}
+
+#map:hover {
+    border:1px solid #2e81fa;
+}
+
+.padreset{padding:0;}
