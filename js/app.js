@@ -1,24 +1,24 @@
 (function(){
     var app = angular.module('dojo', []);
 
-    app.controller('AccueilController',function(){
+    app.controller('dojoController',function(){
 
 
     });
 
-    app.directive('lien',function(){
+    app.directive('liens',function(){
         return {
             restrict : 'E',
-            name : 'lien',
-            templateUrl : '../../partials/common/header.html'
+            name : 'liens',
+            templateUrl : '../../partials/common/liens.html'
         }
     });
 
-    app.directive('nav',function(){
+    app.directive('navigation',function(){
         return {
             restrict : 'E',
-            name : 'nav',
-            templateUrl : '../../partials/common/nav.html'
+            name : 'navigation',
+            templateUrl : '../../partials/common/navigation.html'
         }
     });
 
@@ -26,7 +26,7 @@
         return {
             restrict : 'E',
             name : 'pied',
-            templateUrl: '../../partials/common/footer.html'
+            templateUrl: '../../partials/common/pied.html'
         }
     });
 
