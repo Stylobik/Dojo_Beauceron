@@ -440,5 +440,6 @@ th{
     border:1px solid #2e81fa;
 }
 
-.padreset{padding:0;}
-
+.padreset {
+	padding:0;
+}
