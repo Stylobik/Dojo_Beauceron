@@ -26,6 +26,14 @@
             templateUrl: '/partials/common/pied.html'
         }
     });
+
+    app.directive('slideAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'slideAccueil',
+            templateUrl:'/partials/accueil/slideAccueil'
+        }
+    });
  //});
 })();
 
