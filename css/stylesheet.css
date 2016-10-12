@@ -273,3 +273,46 @@ p {
 	height:10px;
 	background-color:black;
 }
+/* Carousel Documents */
+.carousel-control {
+  padding-top:10%;
+  width:5%;
+}
+.well {
+	margin-top: 150px;
+}
+h1 {
+	color:#2e81fa;
+	text-align: center;
+	font-weight: bold;
+}
+.carousel-inner {
+	padding-top: 50px;
+}
+
+.carousel {
+	height: 450px;
+}
+
+/* Horaires */
+table {
+	margin-top:150px;
+}
+.col1H{
+	width:80px;
+}
+.col2H{
+	width: 150px;
+}
+.col3H{
+	width: 150px;
+}
+.col4H{
+	width: 150px;
+}
+.col5H{
+	width: 150px;
+}
+th{
+	font-weight: bold;
+}
