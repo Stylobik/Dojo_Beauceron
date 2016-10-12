@@ -6,11 +6,19 @@
 
     });
 
-    app.directive('navigation',function(){
+    app.directive('lien',function(){
         return {
             restrict : 'E',
-            name : 'navigation',
+            name : 'lien',
             templateUrl : '../../partials/common/header.html'
+        }
+    });
+
+    app.directive('nav',function(){
+        return {
+            restrict : 'E',
+            name : 'nav',
+            templateUrl : '../../partials/common/nav.html'
         }
     });
 
