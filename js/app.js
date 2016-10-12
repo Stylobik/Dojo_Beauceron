@@ -6,15 +6,21 @@
 
     });
 
-    app.directive('header',function(){
+    app.directive('navigation',function(){
         return {
-            restrict : 'EA',
-            name : 'header',
-            templateUrl : 'header.html'
+            restrict : 'E',
+            name : 'navigation',
+            templateUrl : '../../partials/common/header.html'
         }
     });
 
-
+    app.directive('pied',function(){
+        return {
+            restrict : 'E',
+            name : 'pied',
+            templateUrl: '../../partials/common/footer.html'
+        }
+    });
 
 })();
 
