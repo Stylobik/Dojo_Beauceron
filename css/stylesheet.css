@@ -135,13 +135,17 @@ ul > li {
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
+    line-height: 100px
 }
 
 .footer a{
 	color: white;
+	margin: 0;
+}
+
+.footer p{
+	color: white;
+	margin: 0;
 }
 
 .btn-primary{
@@ -289,9 +293,7 @@ h1 {
 	color:#2e81fa;
 	text-align: center;
 	font-weight: bold;
-}
-.carousel-inner {
-	padding-top: 50px;
+	margin-bottom: 50px;
 }
 
 .carousel {
@@ -375,6 +377,13 @@ h1 {
 .mentions_legales {
 	text-align: center;
 	margin-bottom: 20px;
+}
+
+.legal_text {
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding-left: 0rem;
+	padding-right: 0rem;
 }
 
 .pad {
