@@ -34,6 +34,20 @@
             templateUrl:'/partials/accueil/slide-accueil.html'
         }
     });
+    app.directive('discipline', function(){
+        return {
+            restrict : 'EA',
+            name : 'discipline',
+            templateUrl:'/partials/accueil/disciplines.html'
+        }
+    });
+    app.directive('newsAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'newsAccueil',
+            templateUrl : '/partials/accueil/news-accueil.html'
+        }
+    });
  //});
 })();
 
