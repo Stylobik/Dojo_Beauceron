@@ -31,7 +31,7 @@
         return {
             restrict : 'EA',
             name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slideAccueil'
+            templateUrl:'/partials/accueil/slide-accueil.html'
         }
     });
  //});
