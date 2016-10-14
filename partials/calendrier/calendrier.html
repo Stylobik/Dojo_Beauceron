@@ -1,61 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr" ng-app="dojo">
-<meta charset='utf-8'/>
+<head>
+    <meta charset="utf-8">
 
-<title>Dojo Beauceron - Calendrier</title>
+    <title>Dojo Beauceron - Calendrier</title>
 
-<script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
-<script type="text/javascript" src="../../js/app.js"></script>
+    <script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
 
-<liens></liens>
+    <liens></liens>
 
-<!-- SCRIPTS GENERAUX NECESSAIRES AU CALENDRIER -->
+    <!-- SCRIPTS GENERAUX NECESSAIRES AU CALENDRIER -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- SCRIPTS SPECIFIQUES CALENDRIER -->
-
-<link href='../../js/vendor/fullcalendar/fullcalendar.css' rel='stylesheet' />
-<script src='../../js/vendor/fullcalendar/moment.min.js'></script>
-<script src='../../js/vendor/fullcalendar/jquery.min.js'></script>
-<script src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
-<script src='../../js/vendor/fullcalendar/fr.js'></script>
-
-<script>
-
-	$(document).ready(function() {
-
-		$('#calendar').fullCalendar({
-			defaultDate: '2016-10-03',
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'Meeting Chartres',
-					start: '2016-09-01'
-				},
-				{
-					title: 'Compétition internationale',
-					start: '2016-09-07',
-					end: '2016-09-10'
-				},
-				{
-					title: 'Compétitions Judo',
-					start: '2016-09-11',
-					end: '2016-09-13'
-				},
-				{
-					title: 'Debriefing',
-					start: '2016-09-12T18:30:00'
-				}
-
-			]
-		});
-		
-	});
-
-</script>
+    <!-- SCRIPTS SPECIFIQUES CALENDRIER -->
+    <!-- CSS FULLCALENDAR -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor/fullcalendar/fullcalendar.css">
+    <!-- JAVASCRIPT FULLCALENDAR -->
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/moment.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/jquery.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/fr.js'></script>
+    <!-- CHARGEMENT DES EVENEMENTS -->
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/events.js'></script>
 
 </head>
 <body>
@@ -81,7 +50,6 @@
         </div>
     </div>
 </div>
-
 
 <!-- FOOTER -->
 
