@@ -94,7 +94,31 @@
         }
     });
 
+<<<<<<< HEAD
 
+=======
+    app.directive('slideAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'slideAccueil',
+            templateUrl:'/partials/accueil/slide-accueil.html'
+        }
+    });
+    app.directive('discipline', function(){
+        return {
+            restrict : 'EA',
+            name : 'discipline',
+            templateUrl:'/partials/accueil/disciplines.html'
+        }
+    });
+    app.directive('newsAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'newsAccueil',
+            templateUrl : '/partials/accueil/news-accueil.html'
+        }
+    });
+>>>>>>> 8324cb00cb877eb2cec8031a0fef4d54652c5fbc
  //});
 })();
 
