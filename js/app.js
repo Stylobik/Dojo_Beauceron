@@ -3,21 +3,21 @@
 
     //app.controller('dojoController',function(){
 
-    app.controller('DocumentsController', function($scope){
-        $scope.documents = [
+        app.controller('DocumentsController', function($scope){
+            $scope.documents = [
             {
                 id: 1,
-            name: 'Autorisation Permanente',
-            link: "/documents/Autorisation_permanente.pdf",
-            download: "Autorisation_permanente.pdf",
-            images: "/documents/Autorisation_permanente.jpg"
-        }, {
-            id: 2,
-            name: 'Autorisation Photo',
-            link: "/documents/Autorisation_photo.pdf",
-            download: "Autorisation_photo.pdf",
-            images: "/documents/Autorisation_photo.jpg",
-        },
+                name: 'Autorisation Permanente',
+                link: "/documents/Autorisation_permanente.pdf",
+                download: "Autorisation_permanente.pdf",
+                images: "/documents/Autorisation_permanente.jpg"
+            }, {
+                id: 2,
+                name: 'Autorisation Photo',
+                link: "/documents/Autorisation_photo.pdf",
+                download: "Autorisation_photo.pdf",
+                images: "/documents/Autorisation_photo.jpg",
+            },
             {
                 id: 3,
                 name: 'Autorisation Test Anti-Dopage',
@@ -68,57 +68,53 @@
                 images: "/documents/Tarif.jpg",
             }
             ];
-    });
+        });
 
-    app.directive('liens',function(){
-        return {
-            restrict : 'EA',
-            name : 'liens',
-            templateUrl : '/partials/common/liens.html'
-        }
-    });
+        app.directive('liens',function(){
+            return {
+                restrict : 'EA',
+                name : 'liens',
+                templateUrl : '/partials/common/liens.html'
+            }
+        });
 
-    app.directive('navigation',function(){
-        return {
-            restrict : 'EA',
-            name : 'navigation',
-            templateUrl : '/partials/common/navigation.html'
-        }
-    });
+        app.directive('navigation',function(){
+            return {
+                restrict : 'EA',
+                name : 'navigation',
+                templateUrl : '/partials/common/navigation.html'
+            }
+        });
 
-    app.directive('pied',function(){
-        return {
-            restrict : 'EA',
-            name : 'pied',
-            templateUrl: '/partials/common/pied.html'
-        }
-    });
+        app.directive('pied',function(){
+            return {
+                restrict : 'EA',
+                name : 'pied',
+                templateUrl: '/partials/common/pied.html'
+            }
+        });
 
-<<<<<<< HEAD
-
-=======
-    app.directive('slideAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slide-accueil.html'
-        }
-    });
-    app.directive('discipline', function(){
-        return {
-            restrict : 'EA',
-            name : 'discipline',
-            templateUrl:'/partials/accueil/disciplines.html'
-        }
-    });
-    app.directive('newsAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'newsAccueil',
-            templateUrl : '/partials/accueil/news-accueil.html'
-        }
-    });
->>>>>>> 8324cb00cb877eb2cec8031a0fef4d54652c5fbc
+        app.directive('slideAccueil', function(){
+            return {
+                restrict : 'EA',
+                name : 'slideAccueil',
+                templateUrl:'/partials/accueil/slide-accueil.html'
+            }
+        });
+        app.directive('discipline', function(){
+            return {
+                restrict : 'EA',
+                name : 'discipline',
+                templateUrl:'/partials/accueil/disciplines.html'
+            }
+        });
+        app.directive('newsAccueil', function(){
+            return {
+                restrict : 'EA',
+                name : 'newsAccueil',
+                templateUrl : '/partials/accueil/news-accueil.html'
+            }
+        });
  //});
 })();
 

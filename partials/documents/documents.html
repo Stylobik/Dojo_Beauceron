@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html ng-app="dojo">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dojo Beauceron - Documents</title>
+    <script src="../../js/vendor/angular/angular.js"></script>
+    <script src="../../js/app.js"></script>
+    <liens></liens>
+    <script src="../../js/vendor/jquery/jquery.js"></script>
+    <script src="../../js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../../js/documents.js"></script>
+</head>
+
+<body ng-controller="DocumentsController as doc">
+
+<navigation></navigation>
+
+<!--TITRE PAGE-->
+<div class="container">
+    <!-- Début Carrousel Documents -->
+    <div class="well">
+        <div class="col-xs-12">
+            <h1>Documents à télécharger</h1></div>
+        <div id="myCarousel" class="carousel slide" data-pause="null">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index < 3">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">{{document.name}}</div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/item-->
+
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index > 2 && $index < 6">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">{{document.name}}</div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/item-->
+
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index > 5 && $index < 9">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">"{{document.name}}"</div>
+                        </div>
+                        <!--row-->
+                    </div>
+                    <!--item-->
+                </div>
+                <!--/CarouselInner-->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!-- /well -->
+    </div>
+</div>
+<!--/container -->
+<pied></pied>
+</body>
+
+</html>
