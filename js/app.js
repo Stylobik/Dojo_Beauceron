@@ -116,6 +116,45 @@
         }
     });
 
+    app.directive('sliderDocuments', function(){
+       return {
+           restrict : 'EA',
+           name : 'sliderDocuments',
+           templateUrl : '/partials/documents/slider-documents.html'
+       }
+    });
+
+    app.controller('resultatsController', function($scope){
+        $scope.resultats = [
+            {
+                id: 1,
+                annee: '2016-2017',
+                sexe: 'Homme',
+                categorie: "Poussins",
+                title: "Compétition du 12/06/16",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni                    harum nemo numquam adipisci odio nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.",
+            }
+        ];
+    });
+
+    app.directive('selectAnnee', function(){
+        return {
+            restrict : 'EA',
+            name : 'selectAnnee',
+            templateUrl : '/partials/resultats/select-annee.html'
+        }
+    });
+
+    app.directive('selectSexe', function(){
+        return {
+            restrict : 'EA',
+            name : 'selectSexe',
+            templateUrl : '/partials/resultats/select-sexe.html'
+        }
+    });
+
+
  //});
 })();
 
