@@ -404,8 +404,8 @@ h1 {
 }
 
 /* Horaires */
-table_horaires {
-	margin-top:150px;
+.horaires{
+	text-align: center;
 }
 
 .col1H{
@@ -425,6 +425,12 @@ table_horaires {
 }
 
 .col5H{
+	width: 150px;
+}
+.col6H{
+	width: 150px;
+}
+.col7H{
 	width: 150px;
 }
 
