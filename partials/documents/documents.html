@@ -1,78 +1,73 @@
 <!DOCTYPE HTML>
 <html ng-app="dojo">
-	<head>
-		<meta charset = "utf-8"/>
-		<title>Dojo Beauceron - Documents</title>
-        <script src="../../js/vendor/angular/angular.js"></script>
-        <script src="../../js/app.js"></script>
-		<liens></liens>
-        <script src="../../js/vendor/jquery/jquery.js"></script>
-        <script src="../../js/vendor/bootstrap/bootstrap.min.js"></script>
-        <script src="../../js/documents.js"></script>
 
+<head>
+    <meta charset="utf-8" />
+    <title>Dojo Beauceron - Documents</title>
+    <script src="../../js/vendor/angular/angular.js"></script>
+    <script src="../../js/app.js"></script>
+    <liens></liens>
+    <script src="../../js/vendor/jquery/jquery.js"></script>
+    <script src="../../js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="../../js/documents.js"></script>
+</head>
 
-    </head>
+<body ng-controller="DocumentsController as doc">
 
-	<body>
+<navigation></navigation>
 
-        <navigation></navigation>
+<!--TITRE PAGE-->
+<div class="container">
+    <!-- Début Carrousel Documents -->
+    <div class="well">
+        <div class="col-xs-12">
+            <h1>Documents à télécharger</h1></div>
+        <div id="myCarousel" class="carousel slide" data-pause="null">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index < 3">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">{{document.name}}</div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/item-->
 
-<!--TITRE PAGE-->	
-	<div class="container">
-        <!-- Début Carrousel Documents -->
-            <div class="well">
-                <div class="col-xs-12"><h1>Documents à télécharger</h1></div>
-                    <div id="myCarousel" class="carousel slide" data-pause="null">
-                     <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="row">
-                                    <div class="col-sm-4"><a href="Documents/Autorisation_permanente.pdf" download="Autorisation_permanente.pdf" class="thumbnail"><img src="Documents/Autorisation_permanente.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Autorisation Permanente</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/Autorisation_photo.pdf" download="Autorisation_photo.pdf" class="thumbnail"><img src="Documents/Autorisation_photo.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Autorisation Photo</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/Autorisation_test_anti_dopage.pdf" download="Autorisation_test_anti_dopage.pdf" class="thumbnail"><img src="Documents/Autorisation_test_anti_dopage.jpg"  class="img-responsive"></a>
-                                    <div class="text-center">Autorisation Test Anti-Dopage</div>
-                                    </div>             
-                                </div><!--/row-->
-                            </div><!--/item-->
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index > 2 && $index < 6">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">{{document.name}}</div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <!--/item-->
 
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-sm-4"><a href="Documents/Certificat_medical.pdf" download="Certificat_medical.pdf"class="thumbnail"><img src="Documents/Certificat_medical.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Certificat Médical</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/notice_demande_de_renouvellement.pdf" download="notice_demande_de_renouvellement.pdf" class="thumbnail"><img src="Documents/notice_demande_de_renouvellement.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Notice renouvellement licence</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/Coupon_AG.pdf" download="Coupon_AG.pdf" class="thumbnail"><img src="Documents/Coupon_AG.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Coupon AG</div>
-                                    </div>
-                                </div><!--/row-->
-                            </div><!--/item-->
-                            <div class="item">
-                                <div class="row">
-                                    <div class="col-sm-4"><a href="Documents/Pouvoir_AG.pdf" download="Pouvoir_AG.pdf" class="thumbnail"><img src="Documents/Pouvoir_AG.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Pouvoir AG</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/Horaires.pdf" download="Horaires.pdf" class="thumbnail"><img src="Documents/Horaires.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Horaires</div>
-                                    </div>
-                                    <div class="col-sm-4"><a href="Documents/Tarif.pdf" download="Tarif.pdf" class="thumbnail"><img src="Documents/Tarif.jpg" class="img-responsive"></a>
-                                    <div class="text-center">Tarifs</div>
-                                    </div>
-                                </div><!--row-->
-                            </div><!--item-->
-                    </div><!--/CarouselInner-->       
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
-                  
-                   
-                </div><!--/myCarousel-->
-            </div><!-- /well -->
-    </div><!--/container -->
-       <pied></pied>
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-4" ng-repeat="document in documents | filter: {id:$index}" ng-if="$index > 5 && $index < 9">
+                            <a href="{{document.link}}" download={{document.download}} class="thumbnail"><img src="{{document.images}}" class="img-responsive"></a>
+                            <div class="text-center">"{{document.name}}"</div>
+                        </div>
+                        <!--row-->
+                    </div>
+                    <!--item-->
+                </div>
+                <!--/CarouselInner-->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+            </div>
+            <!--/myCarousel-->
+        </div>
+        <!-- /well -->
+    </div>
+</div>
+<!--/container -->
+<pied></pied>
 </body>
+
 </html>
