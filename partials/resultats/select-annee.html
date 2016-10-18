@@ -1,16 +1,14 @@
 <div class="col-xs-offset-3 col-xs-2 text-center">
-    <form method="post" action="resultats.html" ng-repeat="resultat in resultats">
-        <p>
+    <form method="post" action="resultats.html">
             <label for="annee">Année</label><br />
             <select name="annee" id="annee" title="selecteurs">
-                <option value="{{resultat.annee}}">2016 - 2017</option>
-                <option value="{{resultat.annee}}">2015 - 2016</option>
-                <option value="{{resultat.annee}}">2014 - 2015</option>
-                <option value="{{resultat.annee}}">2013 - 2014</option>
-                <option value="{{resultat.annee}}">2012 - 2013</option>
-                <option value="{{resultat.annee}}">2011 - 2012</option>
-                <option value="{{resultat.annee}}">2010 - 2011</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
             </select>
-        </p>
     </form>
 </div>

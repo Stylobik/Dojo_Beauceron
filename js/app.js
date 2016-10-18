@@ -6,7 +6,7 @@
     app.controller('DocumentsController', function($scope){
         $scope.documents = [
             {
-                id: 1,
+            id: 1,
             name: 'Autorisation Permanente',
             link: "/documents/Autorisation_permanente.pdf",
             download: "Autorisation_permanente.pdf",
@@ -151,6 +151,22 @@
             restrict : 'EA',
             name : 'selectSexe',
             templateUrl : '/partials/resultats/select-sexe.html'
+        }
+    });
+
+    app.directive('selectCategorie', function(){
+        return {
+            restrict : 'EA',
+            name : 'selectCategorie',
+            templateUrl : '/partials/resultats/select-categorie.html'
+        }
+    });
+
+    app.directive('searchCategorie', function(){
+        return {
+            restrict : 'EA',
+            name : 'searchCategorie',
+            templateUrl : '/partials/resultats/search-categorie.html'
         }
     });
 
