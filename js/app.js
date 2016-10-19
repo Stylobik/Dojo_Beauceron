@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('dojo', []);
+    var app = angular.module('dojo', ['result','ngRoute']);
 
     //app.controller('dojoController',function(){
 
@@ -124,19 +124,7 @@
        }
     });
 
-    app.controller('resultatsController', function($scope){
-        $scope.resultats = [
-            {
-                id: 1,
-                annee: '2016-2017',
-                sexe: 'Homme',
-                categorie: "Poussins",
-                title: "Compétition du 12/06/16",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni                    harum nemo numquam adipisci odio nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.",
-            }
-        ];
-    });
+
 
     app.directive('selectAnnee', function(){
         return {
@@ -169,6 +157,21 @@
             templateUrl : '/partials/resultats/search-categorie.html'
         }
     });
+
+    app.config(['$routeProvider', function($routeProvider){
+            $routeProvider
+                .when('/documents', {templateUrl: '/partials/documents/documents.html', controller: 'DocumentsController'})
+                .when('/resultats', {templateUrl:'/partials/resultats/resultats.html', controller: 'resultatsController'})
+                .when('/', {templateUrl:'/index.html'})
+                .when('/calendrier', {templateUrl:'/partials/calendrier/calendrier.html'})
+                .when('/mentions-legales', {templateUrl:'/partials/mentions/mentions.html'})
+                .when('/historique', {templateUrl:'/partials/historique/historique.html'})
+                .when('/horaires', {templateUrl:'/partials/horaires/horaires.html'})
+                .when('/inscription', {templateUrl:'/partials/inscription/inscription.html'})
+                .when('/contact', {templateUrl:'/partials/contact/contact.html'})
+                .when('/news', {templateUrl:'/partials/news/news.html'})
+                .otherwise({redirectTo: '/'});
+        }]);
 
 
  //});
