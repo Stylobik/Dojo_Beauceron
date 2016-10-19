@@ -268,7 +268,8 @@ p {
 }
 
 #historique {
-	padding-top:10rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 #liseret{
@@ -404,7 +405,7 @@ h1 {
 }
 
 /* Horaires */
-table_horaires {
+.table_horaires {
 	margin-top:150px;
 }
 
@@ -440,5 +441,6 @@ th{
     border:1px solid #2e81fa;
 }
 
-.padreset{padding:0;}
-
+.padreset {
+	padding:0;
+}

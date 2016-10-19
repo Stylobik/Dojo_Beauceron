@@ -115,6 +115,45 @@
                 templateUrl : '/partials/accueil/news-accueil.html'
             }
         });
+
+    app.directive('slideAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'slideAccueil',
+            templateUrl:'/partials/accueil/slide-accueil.html'
+        }
+    });
+    app.directive('discipline', function(){
+        return {
+            restrict : 'EA',
+            name : 'discipline',
+            templateUrl:'/partials/accueil/disciplines.html'
+        }
+    });
+    app.directive('newsAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'newsAccueil',
+            templateUrl : '/partials/accueil/news-accueil.html'
+        }
+    });
+
+    app.directive('corpsHistorique', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsHistorique',
+            templateUrl : '/partials/historique/corps-historique.html'
+        }
+    });
+
+    app.directive('corpsMentions', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsMentions',
+            templateUrl : '/partials/mentions/corps-mentions.html'
+        }
+    });
+
  //});
 })();
 

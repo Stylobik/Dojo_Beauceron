@@ -1,123 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="dojo">
 <head>
-    <meta charset="UTF-8">
+    <meta charset='utf-8' />
+
     <title>Dojo Beauceron - Historique</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+    <script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
+
+    <liens></liens>
+
 </head>
 <body>
 
 <!-- navigation -->
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <img class="pull-left" src="img/logo.png"><a class="navbar-brand" id="title_logo" href="#">Dojo Beauceron</a>
-        </div>
+<navigation></navigation>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.html">Accueil</a></li>
+<!-- corps -->
 
-                <li class="dropdown">
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actualités <span class="caret"></span></a>-->
-                    <a href="#">Actualités <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="calendrier.html">Calendrier</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Le Club <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Horaires</a></li>
-                        <li><a href="Inscription_Tarifs.html">Inscriptions et Tarifs</a></li>
-                        <li><a href="#">Dojos</a></li>
-                        <li><a href="#">Historique</a></li>
-                        <li><a href="#">Documents</a></li>
-                    </ul>
-                </li>
-                <li><a href="resultats.html">Résultats</a></li>
-                <li><a href="#">Contact</a></li>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Rechercher</button>
-                </form>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<corps-historique></corps-historique>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-offset-3 col-xs-6" id="historique">
-            <h2>Quand le Tatamis revit</h2>
-                <p><strong>Le DOJO BEAUCERON</strong> est un club <em>créé le 19/05/1980</em> par son <strong>Président Fondateur Jean Jacques Le Hénanf</strong>,
-                assisté de <strong>Guy BISSON comme Directeur Technique</strong>.</p>
+<!-- FOOTER -->
 
-                <p>Marqué par la brutale et tragique disparition de Guy Bisson en 2002,
-                ce dernier étant devenu entre temps Président du club, le DOJO BEAUCERON tente de rebondir autour d’une équipe de dirigeants
-                et de professeurs motivés.</p>
-
-                <p>Cependant, la vie d’un club n’est pas toujours un long fleuve tranquille. L’histoire du Dojo beauceron
-                <strong>Chartres-Mainvilliers</strong> en témoigne.</p>
-
-                <p>Celui-ci, qui a formé bon nombre d’enseignants B.E. (Brevet d’Etat) du département,
-                a été frappé par des coups du sort comme le décès en 2002 de son Président Guy Bisson</p>
-
-            <blockquote>
-                <p>"les dirigeants se sont alors serrés les coudes pour perpétuer l’œuvre pour laquelle Guy s’était tant investi"</p>
-            </blockquote>
-            <p>indique <strong>le secrétaire depuis 2002 Christian Malherbe</strong>. Cependant, un conflit est rapidement apparu avec un enseignant, provoquant une
-                fragilité supplémentaire.</p>
-
-            <p>Un noyau de fidèles, composé de dirigeants, enseignants et pratiquants, a alors su tenir le cap et prendre les décisions nécessaires à
-                la survie de l’association rajoute-t-il.</p>
-
-            <p> Reparti sur des bases solides, le club va s’attacher à " relancer son tournoi national le challenge <strong>Catherine-Poussard</strong> " annonce Christian Malherbe.</p>
-
-            <p>"<em>Né en 1987</em>, il est en sommeil depuis 2002. Organisé en mémoire de cette judoka à l’avenir prometteur décédée en <em>1986</em> d’une terrible maladie à l’âge de <em>15 ans</em>
-                , ce challenge accueillait des concurrents de renon " rappelle-t-il.</p>
-
-           <p>Parmi eux, <strong>Isabelle Paque</strong>(championne d’Europe en 1987 +72kg) et <strong>Roger Vachon</strong> (champion d’Europe en 1981 -86kg 7 titres nationaux toutes catégories de
-               1978 à 82 et de 85 à 86) Même <strong>Thierry Rey</strong> (champion olympique en 1980 et champion du monde en 1979 -60kg)le fréquentait, comme coach.</p>
-
-            <p>Lors de la <em>quinzième édition</em>, il avait été rebaptisé <em>Tournoi national Guy-Bisson - Challenge Catherine-Poussard</em>, en hommage au président disparu.</p>
-
-            <p>Autre souvenir gravé dans l’histoire du club, la venue en 1998 de la championne olympique (1996) et double championne du monde (1995 et 1997)
-                <strong>Marie-Claire Restoux</strong> à l’occasion de la fête annuelle du Dojo beauceron.</p>
-
-            <p>Assurant des démonstrations avec des judokas du club, elle s’est signalée par " sa disponibilité et ses qualités humaines à la hauteur de son palmarès
-                ", souligne <strong>Giovanni Pili le président depuis 2002</strong>.</p>
-
-            <p>" Re-grandir avec sagesse ", tel est aujourd’hui l’objectif avancé par l’équipe dirigeante. Doté d’une équipe de professeurs compétents travaillant
-                en parfaite symbiose, le Dojo beauceron peut entrevoir l’avenir avec optimisme. <em>Nicolas Sanson (l’Echo - jeudi 24 Février 2005)</em>
-            </p>
-
-        </div><!-- end col-xs-6 -->
-    </div><!-- end row -->
-</div><!-- end container -->
-
-
-<div class="footer">
-    <div class="col-xs-offset-4 col-xs-4">
-        <p>&copy; 2016, Dojo Beauceron, tous droits réservés</p>
-    </div>
-    <div class="col-xs-4">
-        <a href="mentions.html">Mentions légales</a>
-    </div>
-</div>
+<pied></pied>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
