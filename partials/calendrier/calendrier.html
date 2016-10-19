@@ -23,11 +23,11 @@
     <script type="text/javascript" src='../../js/vendor/fullcalendar/jquery.min.js'></script>
     <script type="text/javascript" src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
     <script type="text/javascript" src='../../js/vendor/fullcalendar/fr.js'></script>
-    <!-- CHARGEMENT DES EVENEMENTS -->
-    <script type="text/javascript" src='../../js/vendor/fullcalendar/events.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-calendar/1.0.0/calendar.min.js'></script>
+
 
 </head>
-<body>
+<body ng-controller="calendarEvents as events">
 
 <!-- NAVIGATION -->
 
@@ -46,7 +46,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
-            <div id='calendar'></div>
+            <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
         </div>
     </div>
 </div>
