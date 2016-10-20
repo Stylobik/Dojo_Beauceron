@@ -50,7 +50,13 @@
                 title: "Compétition du 12/06/16",
                 images: "/img/resultats.jpg",
                 description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
-            }]
+            },
+                {
+                    id: 2,
+                    title: "Compétition du 2/06/16",
+                    images: "/img/resultats.jpg",
+                    description: "Un peu de bla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                }]
         }];
     });
 })();

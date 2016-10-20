@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute']);
+    var app = angular.module('dojo', ['ngRoute','result']);
 
     //app.controller('dojoController',function(){
 
@@ -181,7 +181,7 @@
             templateUrl : '/partials/resultats/search-categorie.html'
         }
     });
-
+/*
     app.config(['$routeProvider', function($routeProvider){
             $routeProvider
                 .when('/', {
@@ -193,8 +193,7 @@
                     controller: 'DocumentsController'
                 })
                 .when('/resultats', {
-                    templateUrl:'/partials/resultats/resultats.html',
-                    controller: 'resultatsController'
+                    templateUrl:'/partials/resultats/resultats.html'
                 })
                 .when('/calendrier', {
                     templateUrl:'/partials/calendrier/calendrier.html',
@@ -230,7 +229,7 @@
                 });
         }]);
 
-
+*/
 
     app.directive('corpsHistorique', function(){
         return {
@@ -246,6 +245,14 @@
             name : 'corpsMentions',
             templateUrl : '/partials/mentions/corps-mentions.html'
         }
+    });
+
+    app.directive('photothequeResultats',function(){
+       return {
+           restrict :'EA',
+           name : 'photothequeResultats',
+           templateUrl : '/partials/resultats/phototheque-resultats.html'
+       }
     });
  //});
 })();

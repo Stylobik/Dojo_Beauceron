@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Dojo Beauceron - Résultats</title>
-    <script src="../../js/vendor/angular/angular.js"></script>
-    <script src="../../js/vendor/angular/angular-route.min.js"></script>
-    <script src="../../js/app.js"></script>
-    <script src="../../js/resultats.js"></script>
-    <liens></liens>
+    <link rel="stylesheet" href="../../css/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
     <script src="../../js/vendor/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="../../js/vendor/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="../../js/app.js"></script>
+    <script type="text/javascript" src="../../js/resultats.js"></script>
     <script src="../../js/vendor/bootstrap/bootstrap.min.js"></script>
 </head>
 <body ng-controller="resultatsController as result">
-<div ng-view></div>
 <navigation></navigation>
 
-<div class="container-fluid">
+<div class="container-fluid" ng-repeat="resultat in resultats">
 
     <div class="row titre_page">
         <div class="col-xs-12"><h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Résultats</h2>
         </div>
     </div>
 
-    <div class="row select_elements" ng-repeat="resultat in resultats">
+    <div class="row select_elements">
 
         <select-annee></select-annee>
 
@@ -34,278 +34,14 @@
 
     <search-categorie></search-categorie>
 
-    <div class="row">
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result1"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result1" tabindex="-1" role="dialog" aria-labelledby="result1">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result2"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result2" tabindex="-1" role="dialog" aria-labelledby="result2">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <phototheque-resultats></phototheque-resultats>
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result3"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result3" tabindex="-1" role="dialog" aria-labelledby="result3">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result4"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result4" tabindex="-1" role="dialog" aria-labelledby="result4">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result5"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result5" tabindex="-1" role="dialog" aria-labelledby="result5">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result6"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result6" tabindex="-1" role="dialog" aria-labelledby="result6">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result7"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result7" tabindex="-1" role="dialog" aria-labelledby="result7">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-4 col-md-3">
-            <div class="thumbnail text-center results_frame">
-                <img src="img/resultats.jpg" alt="" class="responsive">
-                <div class="caption">
-                    <p>Compétition du 12/06/16</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result8"><span
-                            class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade result8" tabindex="-1" role="dialog" aria-labelledby="result8">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="thumbnail text-center">
-                        <h2>
-                            Compétition du 12/06/16
-                        </h2>
-                        <img src="img/resultats.jpg" alt="" class="responsive">
-                        <div class="caption">
-                            <p>Le podium</p>
-                            <p class="alert alert-info">Un peu de blabla. Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Amet est rem repudiandae magni harum nemo numquam adipisci odio
-                                nostrum enim hic similique commodi, temporibus labore sapiente voluptas quo.</p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><span
-                                    class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="footer">
-            <div class="col-xs-4">
-            </div>
-            <div class="col-xs-4">
-                <p>&copy; 2016, Dojo Beauceron, tous droits réservés</p>
-            </div>
-            <div class="col-xs-4">
-                <a href="mentions.html">Mentions légales</a>
-            </div>
-        </div>
-    </div>
+    <pied></pied>
 
 </div>
 

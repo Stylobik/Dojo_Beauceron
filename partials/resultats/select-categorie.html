@@ -2,13 +2,7 @@
     <form method="post" action="resultats.html">
             <label for="annee">Catégorie</label><br />
             <select name="annee" id="annee" class="annee" title="selecteurs">
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
-                <option value="{{resultat.categorie}}">{{resultat.categorie}}</option>
+                <option ng-repeat="categorie in resultat.categories" value="{{categorie.age}}">{{categorie.age}}</option>
             </select>
     </form>
 </div>

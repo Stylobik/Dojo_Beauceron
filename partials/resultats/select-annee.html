@@ -2,13 +2,7 @@
     <form method="post" action="resultats.html">
             <label for="annee">Année</label><br />
             <select name="annee" id="annee" title="selecteurs">
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
-                <option value="{{resultat.annee}}">{{resultat.annee}}</option>
+                <option ng-repeat="annees in resultat.annee" value="{{annees.date}}">{{annees.date}}</option>
             </select>
     </form>
 </div>
