@@ -1,6 +1,6 @@
             <div class="container">
                 <div class="row">
-                    <article class="col-xs-4 sport" id="judo">
+                    <article class="sport col-xs-4" id="judo">
                         <h2 class="text-center">Judo</h2>
                         <img class="discipline img-responsive" src="../../img/Judo.png" alt="">
                         <button class="btn btn-primary center-block">En savoir plus</button>
@@ -79,3 +79,82 @@
                 </div><!-- end row -->
                 <div class="row-detail"></div>
             </div><!-- end container -->
+<script>
+    $(document).ready(function(){
+
+
+
+    var active = false;
+     var sport = $(window.location.hash);
+
+        if(sport.length < 1 || sport.hasClass('actived')){
+            return true;
+        }
+
+        var detail = sport.parent().nextAll('.row-detail:first');
+
+        var sport_detail = $('.sport_detail', sport).clone();
+
+
+        var showElement = function(){
+            detail.append(sport_detail);
+            sport_detail.slideDown();
+
+            // Animation
+            for(var i = 1; i <= 3; i++){
+                $('.stagger' + i, sport_detail).css({opacity:0, marginLeft: -20}).delay(300 + 200 * i).animate({opacity:1, marginLeft:0})
+            }
+
+            active = sport_detail;
+        };
+
+        var hideActive = function(){
+            var tmp = active;
+            tmp.slideUp(500, function(){
+                tmp.remove();
+            });
+        };
+
+        var buildSlideshow = function(){
+            $('.sport_slideshow', sport_detail).nivoSlider({
+                effect : 'boxRain',
+                directionNav: false,
+                controlNav: false,
+                pauseOnHover: false,
+                pauseTime: 3000
+            });
+        };
+
+       
+        // Traitement
+
+
+
+
+
+
+    $('.sport').click(function(e) {
+        e.preventDefault();
+        console.log("coucou");
+        window.location.hash = $(this).attr('id');
+        $('.sport').removeClass('actived');
+        sport.addClass('actived');
+
+        if(active){
+            hideActive();
+        }
+        showElement();
+        buildSlideshow();
+    });
+
+
+
+});
+
+var scrollTo = function(cible){
+    $('html,body').animate({
+        scrollTop: cible.offset().top
+    }, 750);
+};
+
+</script>

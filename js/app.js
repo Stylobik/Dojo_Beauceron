@@ -38,7 +38,7 @@
         return {
             restrict : 'EA',
             name : 'discipline',
-            templateUrl:'/partials/accueil/disciplines.html'
+            templateUrl:'partials/accueil/disciplines.html'
         }
     });
     app.directive('newsAccueil', function(){
