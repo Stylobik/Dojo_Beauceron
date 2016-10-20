@@ -1,12 +1,11 @@
 (function(){
-    var app = angular.module('dojo', ['result','ngRoute']);
+    var app = angular.module('dojo', ['ngRoute']);
 
     //app.controller('dojoController',function(){
 
-        app.controller('DocumentsController', function($scope){
-            $scope.documents = [
+    app.controller('DocumentsController', function($scope){
+        $scope.documents = [
             {
-
             id: 1,
             name: 'Autorisation Permanente',
             link: "/documents/Autorisation_permanente.pdf",
@@ -17,7 +16,7 @@
             name: 'Autorisation Photo',
             link: "/documents/Autorisation_photo.pdf",
             download: "Autorisation_photo.pdf",
-            images: "/documents/Autorisation_photo.jpg",
+            images: "/documents/Autorisation_photo.jpg"
         },
 
             {
@@ -25,49 +24,49 @@
                 name: 'Autorisation Test Anti-Dopage',
                 link: "/documents/Autorisation_test_anti_dopage.pdf",
                 download: "Autorisation_test_anti_dopage.pdf",
-                images: "/documents/Autorisation_test_anti_dopage.jpg",
+                images: "/documents/Autorisation_test_anti_dopage.jpg"
             },
             {
                 id: 4,
                 name: 'Certificat Médical',
                 link: "/documents/Certificat_medical.pdf",
                 download: "Certificat_medical.pdf",
-                images: "/documents/Certificat_medical.jpg",
+                images: "/documents/Certificat_medical.jpg"
             },
             {
                 id: 5,
                 name: 'Notice renouvellement licence',
                 link: "/documents/notice_demande_de_renouvellement.pdf",
                 download: "notice_demande_de_renouvellement.pdf",
-                images: "/documents/notice_demande_de_renouvellement.jpg",
+                images: "/documents/notice_demande_de_renouvellement.jpg"
             },
             {
                 id: 6,
                 name: 'Coupon AG',
                 link: "/documents/Coupon_AG.pdf",
                 download: "Coupon_AG.pdf",
-                images: "/documents/Coupon_AG.jpg",
+                images: "/documents/Coupon_AG.jpg"
             },
             {
                 id: 7,
                 name: 'Pouvoir AG',
                 link: "/documents/Pouvoir_AG.pdf",
                 download: "Pouvoir_AG.pdf",
-                images: "/documents/Pouvoir_AG.jpg",
+                images: "/documents/Pouvoir_AG.jpg"
             },
             {
                 id: 8,
                 name: 'Horaires',
                 link: "/documents/Horaires.pdf",
                 download: "Horaires.pdf",
-                images: "/documents/Horaires.jpg",
+                images: "/documents/Horaires.jpg"
             },
             {
                 id: 9,
                 name: 'Tarifs',
                 link: "/documents/Tarif.pdf",
                 download: "Tarif.pdf",
-                images: "/documents/Tarif.jpg",
+                images: "/documents/Tarif.jpg"
             }
             ];
         });
@@ -185,17 +184,50 @@
 
     app.config(['$routeProvider', function($routeProvider){
             $routeProvider
-                .when('/documents', {templateUrl: '/partials/documents/documents.html', controller: 'DocumentsController'})
-                .when('/resultats', {templateUrl:'/partials/resultats/resultats.html', controller: 'resultatsController'})
-                .when('/', {templateUrl:'/index.html'})
-                .when('/calendrier', {templateUrl:'/partials/calendrier/calendrier.html'})
-                .when('/mentions-legales', {templateUrl:'/partials/mentions/mentions.html'})
-                .when('/historique', {templateUrl:'/partials/historique/historique.html'})
-                .when('/horaires', {templateUrl:'/partials/horaires/horaires.html'})
-                .when('/inscription', {templateUrl:'/partials/inscription/inscription.html'})
-                .when('/contact', {templateUrl:'/partials/contact/contact.html'})
-                .when('/news', {templateUrl:'/partials/news/news.html'})
-                .otherwise({redirectTo: '/'});
+                .when('/', {
+                    templateUrl:'/index.html',
+                    controller:'AccueilController'
+                })
+                .when('/documents', {
+                    templateUrl: '/partials/documents/documents.html',
+                    controller: 'DocumentsController'
+                })
+                .when('/resultats', {
+                    templateUrl:'/partials/resultats/resultats.html',
+                    controller: 'resultatsController'
+                })
+                .when('/calendrier', {
+                    templateUrl:'/partials/calendrier/calendrier.html',
+                    controller:'CalendrierController'
+                })
+                .when('/mentions-legales', {
+                    templateUrl:'/partials/mentions/mentions.html',
+                    controller:'MentionsController'
+                })
+                .when('/historique', {
+                    templateUrl:'/partials/historique/historique.html',
+                    controller:'HistoriqueController'
+                })
+                .when('/horaires', {
+                    templateUrl:'/partials/horaires/horaires.html',
+                    controller:'HorairesController'
+
+                })
+                .when('/inscription', {
+                    templateUrl:'/partials/inscription/inscription.html',
+                    controller:'InscriptionController'
+                })
+                .when('/contact', {
+                    templateUrl:'/partials/contact/contact.html',
+                    controller:'ContactController'
+                })
+                .when('/news', {
+                    templateUrl:'/partials/news/news.html',
+                    controller:'NewsController'
+                })
+                .otherwise({
+                    redirectTo: '/'
+                });
         }]);
 
 
@@ -215,8 +247,6 @@
             templateUrl : '/partials/mentions/corps-mentions.html'
         }
     });
-
-
  //});
 })();
 
