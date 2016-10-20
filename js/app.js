@@ -3,9 +3,10 @@
 
     //app.controller('dojoController',function(){
 
-    app.controller('DocumentsController', function($scope){
-        $scope.documents = [
+        app.controller('DocumentsController', function($scope){
+            $scope.documents = [
             {
+
             id: 1,
             name: 'Autorisation Permanente',
             link: "/documents/Autorisation_permanente.pdf",
@@ -18,6 +19,7 @@
             download: "Autorisation_photo.pdf",
             images: "/documents/Autorisation_photo.jpg",
         },
+
             {
                 id: 3,
                 name: 'Autorisation Test Anti-Dopage',
@@ -68,31 +70,53 @@
                 images: "/documents/Tarif.jpg",
             }
             ];
-    });
+        });
 
-    app.directive('liens',function(){
-        return {
-            restrict : 'EA',
-            name : 'liens',
-            templateUrl : '/partials/common/liens.html'
-        }
-    });
+        app.directive('liens',function(){
+            return {
+                restrict : 'EA',
+                name : 'liens',
+                templateUrl : '/partials/common/liens.html'
+            }
+        });
 
-    app.directive('navigation',function(){
-        return {
-            restrict : 'EA',
-            name : 'navigation',
-            templateUrl : '/partials/common/navigation.html'
-        }
-    });
+        app.directive('navigation',function(){
+            return {
+                restrict : 'EA',
+                name : 'navigation',
+                templateUrl : '/partials/common/navigation.html'
+            }
+        });
 
-    app.directive('pied',function(){
-        return {
-            restrict : 'EA',
-            name : 'pied',
-            templateUrl: '/partials/common/pied.html'
-        }
-    });
+        app.directive('pied',function(){
+            return {
+                restrict : 'EA',
+                name : 'pied',
+                templateUrl: '/partials/common/pied.html'
+            }
+        });
+
+        app.directive('slideAccueil', function(){
+            return {
+                restrict : 'EA',
+                name : 'slideAccueil',
+                templateUrl:'/partials/accueil/slide-accueil.html'
+            }
+        });
+        app.directive('discipline', function(){
+            return {
+                restrict : 'EA',
+                name : 'discipline',
+                templateUrl:'/partials/accueil/disciplines.html'
+            }
+        });
+        app.directive('newsAccueil', function(){
+            return {
+                restrict : 'EA',
+                name : 'newsAccueil',
+                templateUrl : '/partials/accueil/news-accueil.html'
+            }
+        });
 
     app.directive('slideAccueil', function(){
         return {
@@ -105,7 +129,7 @@
         return {
             restrict : 'EA',
             name : 'discipline',
-            templateUrl:'/partials/accueil/disciplines.html'
+            templateUrl:'partials/accueil/disciplines.html'
         }
     });
     app.directive('newsAccueil', function(){
@@ -115,6 +139,7 @@
             templateUrl : '/partials/accueil/news-accueil.html'
         }
     });
+
 
     app.directive('sliderDocuments', function(){
        return {
@@ -172,6 +197,24 @@
                 .when('/news', {templateUrl:'/partials/news/news.html'})
                 .otherwise({redirectTo: '/'});
         }]);
+
+
+
+    app.directive('corpsHistorique', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsHistorique',
+            templateUrl : '/partials/historique/corps-historique.html'
+        }
+    });
+
+    app.directive('corpsMentions', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsMentions',
+            templateUrl : '/partials/mentions/corps-mentions.html'
+        }
+    });
 
 
  //});

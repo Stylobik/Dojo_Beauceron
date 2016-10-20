@@ -1,64 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="fullcal">
 <head>
-<meta charset='utf-8' />
+    <meta charset="utf-8">
 
-<title>Dojo Beauceron - Calendrier</title>
+    <title>Dojo Beauceron - Calendrier</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="../../js/fullcal.js"></script>
 
-<!-- SCRIPTS GENERAUX -->
+    <liens></liens>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="../../js/app.js"></script>
+    <!-- SCRIPTS GENERAUX NECESSAIRES AU CALENDRIER -->
 
-<!-- SCRIPTS CALENDRIER -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<link href='../../js/vendor/fullcalendar/fullcalendar.css' rel='stylesheet' />
-<script src='../../js/vendor/fullcalendar/moment.min.js'></script>
-<script src='../../js/vendor/fullcalendar/jquery.min.js'></script>
-<script src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
-<script src='../../js/vendor/fullcalendar/fr.js'></script>
+    <!-- SCRIPTS SPECIFIQUES CALENDRIER -->
+    <!-- CSS FULLCALENDAR -->
+    <link rel="stylesheet" type="text/css" href="../../css/vendor/fullcalendar/fullcalendar.css">
+    <!-- JAVASCRIPT FULLCALENDAR -->
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/moment.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/jquery.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
+    <script type="text/javascript" src='../../js/vendor/fullcalendar/fr.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-calendar/1.0.0/calendar.min.js'></script>
 
-<script>
-
-	$(document).ready(function() {
-
-		$('#calendar').fullCalendar({
-			defaultDate: '2016-10-03',
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'Meeting Chartres',
-					start: '2016-09-01'
-				},
-				{
-					title: 'Compétition internationale',
-					start: '2016-09-07',
-					end: '2016-09-10'
-				},
-				{
-					title: 'Compétitions Judo',
-					start: '2016-09-11',
-					end: '2016-09-13'
-				},
-				{
-					title: 'Debriefing',
-					start: '2016-09-12T18:30:00'
-				}
-
-			]
-		});
-		
-	});
-
-</script>
 
 </head>
-<body ng-controller="dojoController as dojo">
+<body ng-controller="calendarEvents as events">
 
 <!-- NAVIGATION -->
 
@@ -77,32 +46,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
-            <div id='calendar'></div>
+            <div id="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
         </div>
     </div>
 </div>
-
 
 <!-- FOOTER -->
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="footer">
-            <div class="col-xs-4">
-            </div>
-            <div class="col-xs-4">
-            <p>&copy; 2016, Dojo Beauceron, tous droits réservés</p>
-            </div>
-            <div class="col-xs-4">
-            <a href="mentions.html">Mentions légales</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- SCRIPTS -->
-
-
+<pied></pied>
 
 </body>
 </html>
