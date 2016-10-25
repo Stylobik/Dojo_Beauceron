@@ -444,3 +444,18 @@ th{
 .padreset {
 	padding:0;
 }
+
+.popover-content {
+	padding: 5px 7px;
+}
+
+.popover{
+	border: 1px solid #2e81fa;
+}
+
+.fixed{
+	position:fixed;
+	-webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
