@@ -153,7 +153,50 @@
             templateUrl : '/partials/mentions/corps-mentions.html'
         }
     });
+/**************route***************/
+    app.config(['$routeProvider',function($routeProvider) {
+        $routeProvider
+        .when('/', {
+            templateUrl:'partial/accueil/accueil.html',
+        })
+        .when('/calendrier', {
+            templateUrl:'partials/calendrier/calendrier.html',
+            controller: 'calendarEvents',
+        })
+        .when('/contact', {
+            templateUrl:'partials/contact/contact.html',
+            controller: '',
+        })
+        .when('/documents', {
+            templateUrl:'partials/documents/documents.html',
+            controller:'DocumentsController',
+        })
+        .when('/historique', {
+            templateUrl:'partials/historique/historique.html',
+            controller: '',
+        })
+        .when('/horaires', {
+            templateUrl:'partials/horaires/horaires.html',
+            controller: 'calendarEvents',
+        })
+        .when('/inscription', {
+            templateUrl:'partials/inscription/Inscription_Tarifs.html',
+            controller:'',
+        })
+        .when('/mentions', {
+            templateUrl:'partials/mentions/mentions.html',
+            controller:'',
+        })
+        .when('/news', {
+            templateUrl:'partials/news/news.html',
+            controller:'',
+        })
+        .when('/resultats', {
+            templateUrl:'partials/resultats/resultats.html'
+            controller:'',
+        })
 
+        ])
  //});
 })();
 
