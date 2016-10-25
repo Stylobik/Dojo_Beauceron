@@ -2,6 +2,56 @@
     var app = angular.module('dojo', ['ngRoute','result']);
 
     //app.controller('dojoController',function(){
+    app.controller('LiensCtrl', function($scope){
+        $scope.liens = [{
+            links: [{
+                name: "accueil",
+                li_name: "Accueil"
+            },
+                {
+                    name: "actualités",
+                    li_name: "Actualités"
+                },
+                {
+                    name: "calendrier",
+                    li_name: "Calendrier"
+                },
+                {
+                    name: "resultats",
+                    li_name: "Résultats"
+                },
+                {
+                    name: "contact",
+                    li_name: "Contact"
+                }
+
+
+
+            ], menu: [{
+                sName: "horaires",
+                sLi: "Horaires"
+            },
+                {
+                    sName: "inscription",
+                    sLi: "Inscription"
+                },
+                {
+                    sName: "historique",
+                    sLi: "Historique"
+                },
+                {
+                    sName: "documents",
+                    sLi: "Documents"
+                }]
+        }];
+
+
+        $scope.lienCourant = null;
+        $scope.selectionLien = function(lien) {
+            $scope.lienCourant = lien;
+        };
+    });
+
 
     app.controller('DocumentsController', function($scope){
         $scope.documents = [
