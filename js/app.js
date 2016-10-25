@@ -3,6 +3,7 @@
 
     //app.controller('dojoController',function(){
 
+/****************CONTROLLER**************/
 
     app.controller('mainController', function () {
     });
@@ -30,8 +31,6 @@
                     li_name: "Contact"
                 }
 
-
-
             ], menu: [{
                 sName: "horaires",
                 sLi: "Horaires"
@@ -50,18 +49,13 @@
                 }]
         }];
 
-
         $scope.lienCourant = null;
         $scope.selectionLien = function(lien) {
             $scope.lienCourant = lien;
         };
     });
 
-
-      app.controller('mainController', function () {
-      });
-
-        app.controller('DocumentsController', function($scope){
+        app.controller('documentsController', function($scope){
             $scope.documents = [
 
             {
@@ -128,7 +122,24 @@
             }
         ];
     });
+        app.controller('accueilController', function () {
+    });
+        app.controller('FormController', function () {
+    });
+        app.controller('historiqueController', function () {
+    });
+        app.controller('planningController', function () {
+    });
+        app.controller('inscriptionController', function () {
+    });
+        app.controller('mentionsController', function () {
+    });
+        app.controller('newsController', function () {
+    });
+        app.controller('resultatsController', function () {
+    });
 
+/************** DIRECTIVES *************/
     app.directive('liens',function(){
         return {
             restrict : 'EA',
@@ -267,7 +278,7 @@
     app.config(['$routeProvider',function($routeProvider){
         $routeProvider
         .when('/', {
-            templateUrl:'partial/accueil/accueil.html',
+            templateUrl:'partials/accueil/accueil.html',
             controller: 'accueilController'
         })
         .when('/calendrier', {
@@ -276,7 +287,7 @@
         })
         .when('/contact', {
             templateUrl:'partials/contact/contact.html',
-            controller: 'contactController'
+            controller: 'FormController'
         })
         .when('/documents', {
             templateUrl:'partials/documents/documents.html',
@@ -303,7 +314,7 @@
             controller: 'newsController'
         })
         .when('/resultats', {
-            templateUrl:'partials/resultats/resultats.html'
+            templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
         });
 
