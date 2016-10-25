@@ -1,7 +1,8 @@
 (function(){
-    var app = angular.module('dojo', []);
+    var app = angular.module('dojo', ['ngRoute']);
 
     //app.controller('dojoController',function(){
+
 
     app.controller('mainController', function () {
     });
@@ -56,8 +57,13 @@
         };
     });
 
-    app.controller('DocumentsController', function($scope){
-        $scope.documents = [
+
+      app.controller('mainController', function () {
+      });
+
+        app.controller('DocumentsController', function($scope){
+            $scope.documents = [
+
             {
                 id: 1,
                 name: 'Autorisation Permanente',
@@ -207,6 +213,7 @@
         }
     });
 
+
     app.directive('sliderDocuments', function(){
         return {
             restrict : 'EA',
@@ -255,50 +262,52 @@
             templateUrl : '/partials/resultats/phototheque-resultats.html'
         }
     });
-    /**************route***************/
+
+/**************route***************/
     app.config(['$routeProvider',function($routeProvider){
         $routeProvider
-            .when('/', {
-                templateUrl:'partial/accueil/accueil.html',
-                controller: 'accueilController'
-            })
-            .when('/calendrier', {
-                templateUrl:'partials/calendrier/calendrier.html',
-                controller: 'calendarEvents'
-            })
-            .when('/contact', {
-                templateUrl:'partials/contact/contact.html',
-                controller: 'contactController'
-            })
-            .when('/documents', {
-                templateUrl:'partials/documents/documents.html',
-                controller:'documentsController'
-            })
-            .when('/historique', {
-                templateUrl:'partials/historique/historique.html',
-                controller: 'historiqueController'
-            })
-            .when('/horaires', {
-                templateUrl:'partials/horaires/horaires.html',
-                controller: 'planningController'
-            })
-            .when('/inscription', {
-                templateUrl:'partials/inscription/Inscription_Tarifs.html',
-                controller:'inscriptionController'
-            })
-            .when('/mentions', {
-                templateUrl:'partials/mentions/mentions.html',
-                controller:'mentionsController'
-            })
-            .when('/news', {
-                templateUrl:'partials/news/news.html',
-                controller: 'newsController'
-            })
-            .when('/resultats', {
-                templateUrl:'partials/resultats/resultats.html'
-                controller:'resultatsController'
-            });
+        .when('/', {
+            templateUrl:'partial/accueil/accueil.html',
+            controller: 'accueilController'
+        })
+        .when('/calendrier', {
+            templateUrl:'partials/calendrier/calendrier.html',
+            controller: 'calendarEvents'
+        })
+        .when('/contact', {
+            templateUrl:'partials/contact/contact.html',
+            controller: 'contactController'
+        })
+        .when('/documents', {
+            templateUrl:'partials/documents/documents.html',
+            controller:'documentsController'
+        })
+        .when('/historique', {
+            templateUrl:'partials/historique/historique.html',
+            controller: 'historiqueController'
+        })
+        .when('/horaires', {
+            templateUrl:'partials/horaires/horaires.html',
+            controller: 'planningController'
+        })
+        .when('/inscription', {
+            templateUrl:'partials/inscription/Inscription_Tarifs.html',
+            controller:'inscriptionController'
+        })
+        .when('/mentions', {
+            templateUrl:'partials/mentions/mentions.html',
+            controller:'mentionsController',
+        })
+        .when('/news', {
+            templateUrl:'partials/news/news.html',
+            controller: 'newsController'
+        })
+        .when('/resultats', {
+            templateUrl:'partials/resultats/resultats.html'
+            controller:'resultatsController'
+        });
 
-    }]);
+        }]);
+    /*********************fin route***************/
     //});
 })();

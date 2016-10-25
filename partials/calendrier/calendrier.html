@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr" ng-app="fullcal">
-<head>
-    <meta charset="utf-8">
-
-    <title>Dojo Beauceron - Calendrier</title>
-
-    <script type="text/javascript" src="../../js/vendor/angular/angular.js"></script>
-    <script type="text/javascript" src="../../js/fullcal.js"></script>
-
-    <link rel="stylesheet" href="../../css/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/stylesheet.css">
-
-    <!-- SCRIPTS GENERAUX NECESSAIRES AU CALENDRIER -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- SCRIPTS SPECIFIQUES CALENDRIER -->
-    <!-- CSS FULLCALENDAR -->
-    <link rel="stylesheet" type="text/css" href="../../css/vendor/fullcalendar/fullcalendar.css">
-    <!-- JAVASCRIPT FULLCALENDAR -->
-    <script type="text/javascript" src='../../js/vendor/fullcalendar/moment.min.js'></script>
-    <script type="text/javascript" src='../../js/vendor/fullcalendar/jquery.min.js'></script>
-    <script type="text/javascript" src='../../js/vendor/fullcalendar/fullcalendar.min.js'></script>
-    <script type="text/javascript" src='../../js/vendor/fullcalendar/fr.js'></script>
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-calendar/1.0.0/calendar.min.js'></script>
-
-
-</head>
-<body ng-controller="calendarEvents as events">
-
-<!-- NAVIGATION -->
-
-<navigation></navigation>
-
 <!-- TITRE PAGE-->
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="calendarEvents as events">
     <div class="row titre_page">
         <div class="col-xs-12"><h2><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendrier</h2></div>
     </div>
@@ -51,10 +15,3 @@
         </div>
     </div>
 </div>
-
-<!-- FOOTER -->
-
-<pied></pied>
-
-</body>
-</html>
