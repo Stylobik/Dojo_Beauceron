@@ -1,7 +1,11 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute','result']);
+    var app = angular.module('dojo', []);
 
     //app.controller('dojoController',function(){
+
+    app.controller('mainController', function () {
+    });
+
     app.controller('LiensCtrl', function($scope){
         $scope.liens = [{
             links: [{
@@ -52,23 +56,21 @@
         };
     });
 
-
     app.controller('DocumentsController', function($scope){
         $scope.documents = [
             {
-            id: 1,
-            name: 'Autorisation Permanente',
-            link: "/documents/Autorisation_permanente.pdf",
-            download: "Autorisation_permanente.pdf",
-            images: "/documents/Autorisation_permanente.jpg"
-        }, {
-            id: 2,
-            name: 'Autorisation Photo',
-            link: "/documents/Autorisation_photo.pdf",
-            download: "Autorisation_photo.pdf",
-            images: "/documents/Autorisation_photo.jpg"
-        },
-
+                id: 1,
+                name: 'Autorisation Permanente',
+                link: "/documents/Autorisation_permanente.pdf",
+                download: "Autorisation_permanente.pdf",
+                images: "/documents/Autorisation_permanente.jpg"
+            }, {
+                id: 2,
+                name: 'Autorisation Photo',
+                link: "/documents/Autorisation_photo.pdf",
+                download: "Autorisation_photo.pdf",
+                images: "/documents/Autorisation_photo.jpg"
+            },
             {
                 id: 3,
                 name: 'Autorisation Test Anti-Dopage',
@@ -118,54 +120,54 @@
                 download: "Tarif.pdf",
                 images: "/documents/Tarif.jpg"
             }
-            ];
-        });
+        ];
+    });
 
-        app.directive('liens',function(){
-            return {
-                restrict : 'EA',
-                name : 'liens',
-                templateUrl : '/partials/common/liens.html'
-            }
-        });
+    app.directive('liens',function(){
+        return {
+            restrict : 'EA',
+            name : 'liens',
+            templateUrl : '/partials/common/liens.html'
+        }
+    });
 
-        app.directive('navigation',function(){
-            return {
-                restrict : 'EA',
-                name : 'navigation',
-                templateUrl : '/partials/common/navigation.html'
-            }
-        });
+    app.directive('navigation',function(){
+        return {
+            restrict : 'EA',
+            name : 'navigation',
+            templateUrl : '/partials/common/navigation.html'
+        }
+    });
 
-        app.directive('pied',function(){
-            return {
-                restrict : 'EA',
-                name : 'pied',
-                templateUrl: '/partials/common/pied.html'
-            }
-        });
+    app.directive('pied',function(){
+        return {
+            restrict : 'EA',
+            name : 'pied',
+            templateUrl: '/partials/common/pied.html'
+        }
+    });
 
-        app.directive('slideAccueil', function(){
-            return {
-                restrict : 'EA',
-                name : 'slideAccueil',
-                templateUrl:'/partials/accueil/slide-accueil.html'
-            }
-        });
-        app.directive('discipline', function(){
-            return {
-                restrict : 'EA',
-                name : 'discipline',
-                templateUrl:'/partials/accueil/disciplines.html'
-            }
-        });
-        app.directive('newsAccueil', function(){
-            return {
-                restrict : 'EA',
-                name : 'newsAccueil',
-                templateUrl : '/partials/accueil/news-accueil.html'
-            }
-        });
+    app.directive('slideAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'slideAccueil',
+            templateUrl:'/partials/accueil/slide-accueil.html'
+        }
+    });
+    app.directive('discipline', function(){
+        return {
+            restrict : 'EA',
+            name : 'discipline',
+            templateUrl:'/partials/accueil/disciplines.html'
+        }
+    });
+    app.directive('newsAccueil', function(){
+        return {
+            restrict : 'EA',
+            name : 'newsAccueil',
+            templateUrl : '/partials/accueil/news-accueil.html'
+        }
+    });
 
     app.directive('slideAccueil', function(){
         return {
@@ -189,15 +191,29 @@
         }
     });
 
-
-    app.directive('sliderDocuments', function(){
-       return {
-           restrict : 'EA',
-           name : 'sliderDocuments',
-           templateUrl : '/partials/documents/slider-documents.html'
-       }
+    app.directive('corpsHistorique', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsHistorique',
+            templateUrl : '/partials/historique/corps-historique.html'
+        }
     });
 
+    app.directive('corpsMentions', function(){
+        return {
+            restrict : 'EA',
+            name : 'corpsMentions',
+            templateUrl : '/partials/mentions/corps-mentions.html'
+        }
+    });
+
+    app.directive('sliderDocuments', function(){
+        return {
+            restrict : 'EA',
+            name : 'sliderDocuments',
+            templateUrl : '/partials/documents/slider-documents.html'
+        }
+    });
 
 
     app.directive('selectAnnee', function(){
@@ -231,79 +247,58 @@
             templateUrl : '/partials/resultats/search-categorie.html'
         }
     });
-/*
-    app.config(['$routeProvider', function($routeProvider){
-            $routeProvider
-                .when('/', {
-                    templateUrl:'/index.html',
-                    controller:'AccueilController'
-                })
-                .when('/documents', {
-                    templateUrl: '/partials/documents/documents.html',
-                    controller: 'DocumentsController'
-                })
-                .when('/resultats', {
-                    templateUrl:'/partials/resultats/resultats.html'
-                })
-                .when('/calendrier', {
-                    templateUrl:'/partials/calendrier/calendrier.html',
-                    controller:'CalendrierController'
-                })
-                .when('/mentions-legales', {
-                    templateUrl:'/partials/mentions/mentions.html',
-                    controller:'MentionsController'
-                })
-                .when('/historique', {
-                    templateUrl:'/partials/historique/historique.html',
-                    controller:'HistoriqueController'
-                })
-                .when('/horaires', {
-                    templateUrl:'/partials/horaires/horaires.html',
-                    controller:'HorairesController'
-
-                })
-                .when('/inscription', {
-                    templateUrl:'/partials/inscription/inscription.html',
-                    controller:'InscriptionController'
-                })
-                .when('/contact', {
-                    templateUrl:'/partials/contact/contact.html',
-                    controller:'ContactController'
-                })
-                .when('/news', {
-                    templateUrl:'/partials/news/news.html',
-                    controller:'NewsController'
-                })
-                .otherwise({
-                    redirectTo: '/'
-                });
-        }]);
-
-*/
-
-    app.directive('corpsHistorique', function(){
-        return {
-            restrict : 'EA',
-            name : 'corpsHistorique',
-            templateUrl : '/partials/historique/corps-historique.html'
-        }
-    });
-
-    app.directive('corpsMentions', function(){
-        return {
-            restrict : 'EA',
-            name : 'corpsMentions',
-            templateUrl : '/partials/mentions/corps-mentions.html'
-        }
-    });
 
     app.directive('photothequeResultats',function(){
-       return {
-           restrict :'EA',
-           name : 'photothequeResultats',
-           templateUrl : '/partials/resultats/phototheque-resultats.html'
-       }
+        return {
+            restrict :'EA',
+            name : 'photothequeResultats',
+            templateUrl : '/partials/resultats/phototheque-resultats.html'
+        }
     });
- //});
-})();
+    /**************route***************/
+    app.config(['$routeProvider',function($routeProvider){
+        $routeProvider
+            .when('/', {
+                templateUrl:'partial/accueil/accueil.html',
+                controller: 'accueilController'
+            })
+            .when('/calendrier', {
+                templateUrl:'partials/calendrier/calendrier.html',
+                controller: 'calendarEvents'
+            })
+            .when('/contact', {
+                templateUrl:'partials/contact/contact.html',
+                controller: 'contactController'
+            })
+            .when('/documents', {
+                templateUrl:'partials/documents/documents.html',
+                controller:'documentsController'
+            })
+            .when('/historique', {
+                templateUrl:'partials/historique/historique.html',
+                controller: 'historiqueController'
+            })
+            .when('/horaires', {
+                templateUrl:'partials/horaires/horaires.html',
+                controller: 'planningController'
+            })
+            .when('/inscription', {
+                templateUrl:'partials/inscription/Inscription_Tarifs.html',
+                controller:'inscriptionController'
+            })
+            .when('/mentions', {
+                templateUrl:'partials/mentions/mentions.html',
+                controller:'mentionsController'
+            })
+            .when('/news', {
+                templateUrl:'partials/news/news.html',
+                controller: 'newsController'
+            })
+            .when('/resultats', {
+                templateUrl:'partials/resultats/resultats.html'
+                controller:'resultatsController'
+            });
 
+    }]);
+    //});
+})();
