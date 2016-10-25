@@ -1,14 +1,6 @@
 (function(){
     var app = angular.module('fullcal', ['ui.calendar']);
 
-    app.directive('liens',function(){
-        return {
-            restrict : 'EA',
-            name : 'liens',
-            templateUrl : '/partials/common/liens.html'
-        }
-    });
-
     app.directive('navigation',function(){
         return {
             restrict : 'EA',
