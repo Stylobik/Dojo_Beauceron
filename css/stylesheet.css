@@ -455,4 +455,7 @@ th{
 
 .fixed{
 	position:fixed;
+	-webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
 }
