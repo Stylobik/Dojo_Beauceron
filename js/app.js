@@ -6,7 +6,10 @@
 /****************CONTROLLER**************/
 
     app.controller('mainController', function () {
+
     });
+
+
 
     app.controller('LiensCtrl', function($scope){
         $scope.liens = [{
@@ -29,9 +32,9 @@
                 {
                     name: "contact",
                     li_name: "Contact"
-                }
 
-            ], menu: [{
+                }], menu: [{
+
                 sName: "horaires",
                 sLi: "Horaires"
             },
@@ -54,6 +57,7 @@
             $scope.lienCourant = lien;
         };
     });
+
 
         app.controller('documentsController', function($scope){
             $scope.documents = [
@@ -307,7 +311,7 @@
         })
         .when('/mentions', {
             templateUrl:'partials/mentions/mentions.html',
-            controller:'mentionsController',
+            controller:'mentionsController'
         })
         .when('/news', {
             templateUrl:'partials/news/news.html',
@@ -320,5 +324,5 @@
 
         }]);
     /*********************fin route***************/
-    //});
+
 })();
