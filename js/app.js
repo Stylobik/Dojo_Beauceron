@@ -164,8 +164,11 @@
                     date: "2010-2011"
                 }],
             categories: [{
-                age: "Poussins"
+                age: "Tous"
             },
+                {
+                    age: "Poussins"
+                },
                 {
                     age: "Benjamins"
                 },
