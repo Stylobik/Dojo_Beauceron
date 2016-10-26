@@ -337,6 +337,10 @@
             templateUrl:'partials/news/news.html',
             controller: 'newsController'
         })
+        .when('/mentions', {
+            templateUrl:'partials/mentions/mentions.html',
+            controller: 'mentionsController'
+        })
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
