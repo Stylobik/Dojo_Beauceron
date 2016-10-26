@@ -17,6 +17,8 @@
         }
     });
 
+/* SCRIPTS CALENDRIER  */
+
     app.controller('calendarEvents', ['$scope', function($scope){
 
       var date = new Date();
@@ -53,10 +55,12 @@
           }   
       };
 
-      /* event sources array*/
+      /* event sources array */
       $scope.eventSources = [$scope.events];
 
-    }]);
+    }]); /* Fin du calendarEvents controller */
+
+/* FIN SCRIPTS CALENDRIER */
 
  //});
 })();
