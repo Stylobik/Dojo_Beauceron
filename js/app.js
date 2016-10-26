@@ -15,7 +15,7 @@
                 li_name: "Accueil"
             },
                 {
-                    name: "actualités",
+                    name: "news",
                     li_name: "Actualités"
                 },
                 {
@@ -334,6 +334,10 @@
     app.config(['$routeProvider',function($routeProvider){
         $routeProvider
         .when('/', {
+            templateUrl:'partials/accueil/accueil.html',
+            controller: 'accueilController'
+        })
+        .when('/accueil', {
             templateUrl:'partials/accueil/accueil.html',
             controller: 'accueilController'
         })
