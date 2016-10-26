@@ -18,7 +18,7 @@
                 li_name: "Accueil"
             },
                 {
-                    name: "actualités",
+                    name: "news",
                     li_name: "Actualités"
                 },
                 {
@@ -223,50 +223,7 @@
             templateUrl: '/partials/common/pied.html'
         }
     });
-
-    app.directive('slideAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slide-accueil.html'
-        }
-    });
-    app.directive('discipline', function(){
-        return {
-            restrict : 'EA',
-            name : 'discipline',
-            templateUrl:'/partials/accueil/disciplines.html'
-        }
-    });
-    app.directive('newsAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'newsAccueil',
-            templateUrl : '/partials/accueil/news-accueil.html'
-        }
-    });
-
-    app.directive('slideAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slide-accueil.html'
-        }
-    });
-    app.directive('discipline', function(){
-        return {
-            restrict : 'EA',
-            name : 'discipline',
-            templateUrl:'partials/accueil/disciplines.html'
-        }
-    });
-    app.directive('newsAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'newsAccueil',
-            templateUrl : '/partials/accueil/news-accueil.html'
-        }
-    });
+    
 
     app.directive('corpsHistorique', function(){
         return {
@@ -341,6 +298,10 @@
             templateUrl:'partials/accueil/accueil.html',
             controller: 'accueilController'
         })
+        .when('/accueil', {
+            templateUrl:'partials/accueil/accueil.html',
+            controller: 'accueilController'
+        })
         .when('/calendrier', {
             templateUrl:'partials/calendrier/calendrier.html',
             controller: 'calendarEvents'
@@ -376,6 +337,7 @@
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
+            /**controllerAs: **/
         });
 
         }]);
