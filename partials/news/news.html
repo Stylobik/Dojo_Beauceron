@@ -1,138 +1,105 @@
+
 <!-- Begin Body -->
-<div ng-contoller="newsController as newsCtrl" class="container pad">
-    <div class="no-gutter row">
-
-
-            <!--mid column-->
-            <div class="col-md-3">
-              <div class="panel" id="midCol">
-                <div class="panel-heading" style="background-color:#555;color:#eee;">Parcourir</div>
-
-
-                <div id="select"><h2>Choisissez :</h2>
-                <form method="post" action="news.html">
-                   <p>
-                       <label for="sport">Sport</label><br />
-                       <select name="sport" id="sport">
-                           <option value="judo">Judo</option>
-                           <option value="taiso">Taïso</option>
-                           <option value="jujitsu">Ju-Jitsu</optionewsmidn>
-                       </select></p></form>
-
-                <form method="post" action="news.html">
-                    <label for="annee">Année</label><br />
-                       <select name="annee" id="annee">
-                           <option value="2016">2016</option>
-                           <option value="2015">2015</option>
-                           <option value="2014">2014</option>
-                       </select>
-
-                </form>
-                </div>
-
-                <div class="panel-body panelnews">
-
-                  <div class="newsmid">
-                  <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-
-                    <div class="newsmid">
-                  <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-
-                  <div class="newsmid">
-                  <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-
-                  <div class="newsmid">
-                  <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-
-                  <div class="newsmid">
-                  <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-
-                  <div class="newsmid">
-                 <a href="#"><img class="img-responsive" src="img/news.jpeg"></a>
-                  <p>Ligne Titre</p>
-                  </div>
-               </div>
-               </div><!--/panel-->
-            </div><!--/end mid column-->
-
-            <!-- right content column-->
-            <div class="col-md-7" id="content">
-                <div class="panel">
-                <div class="panel-heading" style="background-color:#111;color:#fff;">Dernières News</div>
-                <div class="panel-body">
-
-                  <div class="row">
-                  <div class="newsright"><h2>Judo</h2><img class="img-responsive" src="img/news.jpeg">
-
-                    <div class="newscontent">
-                    <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.<br><br>
-                    <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
-                    <br><br>
-
-
-                  </div>
-
-                  <div class="newsright"><h2>Judo</h2><img class="img-responsive" src="img/news.jpeg">
-
-                    <div class="newscontent">
-                    <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
-                    <br><br>
-
-
-                  </div>
-
-                                    <div class="newsright"><h2>Judo</h2><img class="img-responsive" src="img/news.jpeg">
-
-                    <div class="newscontent">
-                    <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
-                    <br><br>
-
-
-                  </div>
-
-                                    <div class="newsright"><h2>Judo</h2><img class="img-responsive" src="img/news.jpeg">
-
-                    <div class="newscontent">
-                    <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
-                    <br><br>
-
-
-                  </div>
-
-                                    <div class="newsright"><h2>Judo</h2><img class="img-responsive" src="img/news.jpeg">
-
-                    <div class="newscontent">
-                    <h3>TITRE</h3>
-                    2013 was marked as the year of Responsive Web Design (RWD). The Web is filled with big brands, galleries and magical examples that media queries demonstrate the glory of responsive design.</div><br><br><button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button> <button class="btn btn-primary right-block">Link</button>
-                    <br><br>
-
-
-                  </div>
-
-
-                  </div>
-                </div>
-
-
-
-
-                  </div><!--/panel-body-->
-                </div><!--/panel-->
-                <!--/end right column-->
-        </div>
-    </div>
+<div class="container">
+	<div class="row">
+		<div class="news col-md-4">
+			<img src="../../img/slide1.jpg" data-target=".myToggle1" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle1 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/slide2.jpg" data-target=".myToggle2" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle2 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/photo3.jpg" data-target=".myToggle3" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle3 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="news col-md-4">
+			<img src="../../img/photo3.jpg" data-target=".myToggle4" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle4 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/slide1.jpg" data-target=".myToggle5" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle5 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/slide2.jpg" data-target=".myToggle6" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle6 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="news col-md-4">
+			<img src="../../img/photo3.jpg" data-target=".myToggle7" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle7 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/photo3.jpg" data-target=".myToggle8" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle8 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+		<div class="news col-md-4">
+			<img src="../../img/photo3.jpg" data-target=".myToggle9" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="myToggle9 cap">
+				<h3>TITRE NEWS</h3>
+				<p style='text-align:left; color:#fff;'>
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
+
+<script src="../../js/vendor/jquery/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../../js/anim.js"></script>
+<script src="../../js/caption.js"></script>

@@ -106,5 +106,5 @@ $(function () {
       $(this).popover('hide');
     });
 
-    google.maps.event.addDomListener(window, 'load', initMap);
+    google.maps.event.addDomListener(window,'load', initMap);
 });

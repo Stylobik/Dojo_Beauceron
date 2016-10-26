@@ -6,7 +6,10 @@
 /****************CONTROLLER**************/
 
     app.controller('mainController', function () {
+
     });
+
+
 
     app.controller('LiensCtrl', function($scope){
         $scope.liens = [{
@@ -15,7 +18,7 @@
                 li_name: "Accueil"
             },
                 {
-                    name: "actualités",
+                    name: "news",
                     li_name: "Actualités"
                 },
                 {
@@ -29,9 +32,9 @@
                 {
                     name: "contact",
                     li_name: "Contact"
-                }
 
-            ], menu: [{
+                }], menu: [{
+
                 sName: "horaires",
                 sLi: "Horaires"
             },
@@ -54,6 +57,7 @@
             $scope.lienCourant = lien;
         };
     });
+
 
         app.controller('documentsController', function($scope){
             $scope.documents = [
@@ -160,8 +164,11 @@
                     date: "2010-2011"
                 }],
             categories: [{
-                age: "Poussins"
+                age: "Tous"
             },
+                {
+                    age: "Poussins"
+                },
                 {
                     age: "Benjamins"
                 },
@@ -219,50 +226,7 @@
             templateUrl: '/partials/common/pied.html'
         }
     });
-
-    app.directive('slideAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slide-accueil.html'
-        }
-    });
-    app.directive('discipline', function(){
-        return {
-            restrict : 'EA',
-            name : 'discipline',
-            templateUrl:'/partials/accueil/disciplines.html'
-        }
-    });
-    app.directive('newsAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'newsAccueil',
-            templateUrl : '/partials/accueil/news-accueil.html'
-        }
-    });
-
-    app.directive('slideAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'slideAccueil',
-            templateUrl:'/partials/accueil/slide-accueil.html'
-        }
-    });
-    app.directive('discipline', function(){
-        return {
-            restrict : 'EA',
-            name : 'discipline',
-            templateUrl:'partials/accueil/disciplines.html'
-        }
-    });
-    app.directive('newsAccueil', function(){
-        return {
-            restrict : 'EA',
-            name : 'newsAccueil',
-            templateUrl : '/partials/accueil/news-accueil.html'
-        }
-    });
+    
 
     app.directive('corpsHistorique', function(){
         return {
@@ -383,6 +347,10 @@
             templateUrl:'partials/accueil/accueil.html',
             controller: 'accueilController'
         })
+        .when('/accueil', {
+            templateUrl:'partials/accueil/accueil.html',
+            controller: 'accueilController'
+        })
         .when('/calendrier', {
             templateUrl:'partials/calendrier/calendrier.html',
             controller: 'calendarEvents'
@@ -415,12 +383,17 @@
             templateUrl:'partials/news/news.html',
             controller: 'newsController'
         })
+        .when('/mentions', {
+            templateUrl:'partials/mentions/mentions.html',
+            controller: 'mentionsController'
+        })
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
+            /**controllerAs: **/
         });
 
         }]);
     /*********************fin route***************/
-    //});
+
 })();
