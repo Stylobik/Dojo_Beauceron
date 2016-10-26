@@ -3,6 +3,7 @@
 
     //app.controller('dojoController',function(){
 
+/****************CONTROLLER**************/
 
     app.controller('mainController', function () {
     });
@@ -30,8 +31,6 @@
                     li_name: "Contact"
                 }
 
-
-
             ], menu: [{
                 sName: "horaires",
                 sLi: "Horaires"
@@ -50,18 +49,13 @@
                 }]
         }];
 
-
         $scope.lienCourant = null;
         $scope.selectionLien = function(lien) {
             $scope.lienCourant = lien;
         };
     });
 
-
-      app.controller('mainController', function () {
-      });
-
-        app.controller('DocumentsController', function($scope){
+        app.controller('documentsController', function($scope){
             $scope.documents = [
 
             {
@@ -128,7 +122,80 @@
             }
         ];
     });
+        app.controller('accueilController', function () {
+    });
+        app.controller('FormController', function () {
+    });
+        app.controller('historiqueController', function () {
+    });
+        app.controller('planningController', function () {
+    });
+        app.controller('inscriptionController', function () {
+    });
+        app.controller('mentionsController', function () {
+    });
+        app.controller('newsController', function () {
+    });
+        app.controller('resultatsController', function ($scope) {
+            $scope.resultats = [{
+            annee: [{
+                date: "2016-2017"
+                },
+                {
+                    date: "2015-2016"
+                },
+                {
+                    date: "2014-2015"
+                },
+                {
+                    date: "2013-2014"
+                },
+                {
+                    date: "2012-2013"
+                },
+                {
+                    date: "2011-2012"
+                },
+                {
+                    date: "2010-2011"
+                }],
+            categories: [{
+                age: "Poussins"
+            },
+                {
+                    age: "Benjamins"
+                },
+                {
+                    age: "Minimes"
+                },
+                {
+                    age: "Cadets"
+                },
+                {
+                    age: "Juniors"
+                },
+                {
+                    age: "Seniors"
+                },
+                {
+                    age: "Vétérans"
+                }],
+            podium: [{
+                id: 1,
+                title: "Compétition du 12/06/16",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+            },
+                {
+                    id: 2,
+                    title: "Compétition du 2/06/16",
+                    images: "/img/resultats.jpg",
+                    description: "Un peu de bla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                }]
+        }];
+    });
 
+/************** DIRECTIVES *************/
     app.directive('liens',function(){
         return {
             restrict : 'EA',
@@ -322,7 +389,7 @@
         })
         .when('/contact', {
             templateUrl:'partials/contact/contact.html',
-            controller: 'contactController'
+            controller: 'FormController'
         })
         .when('/documents', {
             templateUrl:'partials/documents/documents.html',
@@ -342,7 +409,7 @@
         })
         .when('/mentions', {
             templateUrl:'partials/mentions/mentions.html',
-            controller:'mentionsController',
+            controller:'mentionsController'
         })
         .when('/news', {
             templateUrl:'partials/news/news.html',
