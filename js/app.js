@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar']);
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker']);
 
     //app.controller('dojoController',function(){
 
@@ -128,7 +128,60 @@
     });
         app.controller('accueilController', function () {
     });
-        app.controller('FormController', function () {
+        app.controller('FormController', function ($scope, $http, $log, promiseTracker) {
+          $scope.submit = function(form) {
+            // Trigger validation flag.
+            $scope.submitted = true;
+
+            // If form is invalid, return and let AngularJS show validation errors.
+            if (form.$invalid) {
+              return;
+            }
+
+            // Default values for the request.
+            var config = {
+              params : {
+                'callback' : 'JSON_CALLBACK',
+                'name' : $scope.name,
+                'lastName' : $scope.lastName,
+                'email' : $scope.email,
+                'comments' : $scope.comments
+              },
+            };
+
+            // Perform JSONP request.
+            var $promise = $http.jsonp('response.json', config)
+            .success(function(data, status, headers, config) {
+              if (data.status == 'OK') {
+                $scope.name = null;
+                $scope.lastName = null;
+                $scope.email = null;
+                $scope.comments = null;
+                $scope.messages = 'Your form has been sent!';
+                $scope.submitted = false;
+              } else {
+                $scope.messages = 'Oops, we received your request, but there was an error processing it.';
+                $log.error(data);
+              }
+            })
+            .error(function(data, status, headers, config) {
+              $scope.progress = data;
+              $scope.messages = 'There was a network error. Try again later.';
+              $log.error(data);
+            })
+            .finally(function() {
+              // Hide status messages after three seconds.
+              $timeout(function() {
+                $scope.messages = null;
+              }, 3000);
+            });
+
+            // Inititate the promise tracker to track form submissions.
+            $scope.progress = promiseTracker();
+
+            // Track the request and show its progress to the user.
+            $scope.progress.addPromise($promise);
+          };
     });
         app.controller('historiqueController', function () {
     });
@@ -138,7 +191,7 @@
     });
         app.controller('mentionsController', function () {
     });
-        app.controller('newsController', function () {
+        app.controller('newsController', function ($scope) {
     });
         app.controller('resultatsController', function ($scope) {
             $scope.resultats = [{
@@ -226,7 +279,7 @@
             templateUrl: '/partials/common/pied.html'
         }
     });
-    
+
 
     app.directive('corpsHistorique', function(){
         return {
@@ -329,7 +382,7 @@
                   right: 'today prev,next'
               },
               eventRender: $scope.eventRender
-          }   
+          }
       };
 
       /* event sources array */

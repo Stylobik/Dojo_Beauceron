@@ -62,10 +62,10 @@ $(function () {
             });
 
 
-          $(marker1).ready(function(){
+
             $('.dojoCH').css('display','none');
               $('.dojoMV').css('display', 'block').animateCss('fadeIn');
-          });
+
         });
 
         google.maps.event.addListener(marker, 'click', function() {
@@ -79,10 +79,8 @@ $(function () {
                 }
             });
 
-            $(marker).ready(function(){
               $('.dojoMV').css('display','none');
                 $('.dojoCH').css('display', 'block').animateCss('fadeIn');
-            });
         });
 
 
@@ -102,9 +100,7 @@ $(function () {
 
 
     }
-    $('#map').click(function(){
-      $(this).popover('hide');
-    });
+
 
     google.maps.event.addDomListener(window,'load', initMap);
 });
