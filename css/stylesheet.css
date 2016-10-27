@@ -450,3 +450,25 @@ z-index:500;
 .btn-success{
 	border-radius: 0;
 }
+
+a{
+    color:#fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#fff;
+}
+
+#news_btn {
+    margin-bottom:15px;
+}
+
+.sport {
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.btn-sport {
+	margin-top:15px;
+}
