@@ -1,13 +1,29 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar']);
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker']);
 
     //app.controller('dojoController',function(){
 
 /****************CONTROLLER**************/
 
+app.controller("PannelController",function(){
+    this.tab = 1;
+
+    this.selectTab = function(setTab){
+        this.tab = setTab;
+    };
+
+    this.isSelected = function(checkTab){
+        if(this.tab === checkTab){
+            return true;
+        }
+    }
+});
+
     app.controller('mainController', function () {
 
     });
+
+
 
 
 
@@ -128,7 +144,60 @@
     });
         app.controller('accueilController', function () {
     });
-        app.controller('FormController', function () {
+        app.controller('FormController', function ($scope, $http, $log, promiseTracker) {
+          $scope.submit = function(form) {
+            // Trigger validation flag.
+            $scope.submitted = true;
+
+            // If form is invalid, return and let AngularJS show validation errors.
+            if (form.$invalid) {
+              return;
+            }
+
+            // Default values for the request.
+            var config = {
+              params : {
+                'callback' : 'JSON_CALLBACK',
+                'name' : $scope.name,
+                'lastName' : $scope.lastName,
+                'email' : $scope.email,
+                'comments' : $scope.comments
+              },
+            };
+
+            // Perform JSONP request.
+            var $promise = $http.jsonp('response.json', config)
+            .success(function(data, status, headers, config) {
+              if (data.status == 'OK') {
+                $scope.name = null;
+                $scope.lastName = null;
+                $scope.email = null;
+                $scope.comments = null;
+                $scope.messages = 'Your form has been sent!';
+                $scope.submitted = false;
+              } else {
+                $scope.messages = 'Oops, we received your request, but there was an error processing it.';
+                $log.error(data);
+              }
+            })
+            .error(function(data, status, headers, config) {
+              $scope.progress = data;
+              $scope.messages = 'There was a network error. Try again later.';
+              $log.error(data);
+            })
+            .finally(function() {
+              // Hide status messages after three seconds.
+              $timeout(function() {
+                $scope.messages = null;
+              }, 3000);
+            });
+
+            // Inititate the promise tracker to track form submissions.
+            $scope.progress = promiseTracker();
+
+            // Track the request and show its progress to the user.
+            $scope.progress.addPromise($promise);
+          };
     });
         app.controller('historiqueController', function () {
     });
@@ -138,7 +207,7 @@
     });
         app.controller('mentionsController', function () {
     });
-        app.controller('newsController', function () {
+        app.controller('newsController', function ($scope) {
     });
         app.controller('resultatsController', function ($scope) {
             $scope.resultats = [{
@@ -226,7 +295,7 @@
             templateUrl: '/partials/common/pied.html'
         }
     });
-    
+
 
     app.directive('corpsHistorique', function(){
         return {
@@ -306,12 +375,12 @@
       /* event source that contains custom events on the scope */
 
       $scope.events = [
-        { title: 'All Day Event', start: new Date(y, m, 1) },
-        { title: 'Long Event', start: new Date(y, m, d - 5), end: new Date(y, m, d - 2) },
-        { id: 999, title: 'Repeating Event', start: new Date(y, m, d - 3, 16, 0), allDay: false },
-        { id: 999, title: 'Repeating Event', start: new Date(y, m, d + 4, 16, 0), allDay: false },
-        { title: 'Birthday Party', start: new Date(y, m, d + 1, 19, 0), end: new Date(y, m, d + 1, 22, 30), allDay: false },
-        { title: 'Click for Google', start: new Date(y, m, 28), end: new Date(y, m, 29), url: 'http://google.com/' }
+        { title: 'All Day Event', start: new Date(y, m, 1), description:'Un peu de blabla pour test', color: '#BA515C' },
+        { title: 'Long Event', start: new Date(y, m, d - 5), end: new Date(y, m, d - 2), description:'Un peu de blabla pour test', color:'#BA515C' },
+        { id: 999, title: 'Repeating Event', start: new Date(y, m, d - 3, 16, 0), allDay: false, description:'Un peu de blabla pour test', color: '#3A87AD' },
+        { id: 999, title: 'Repeating Event', start: new Date(y, m, d + 4, 16, 0), allDay: false, description:'Un peu de blabla pour test', color: '#3A87AD' },
+        { title: 'Birthday Party', start: new Date(y, m, d + 1, 19, 0), end: new Date(y, m, d + 1, 22, 30), allDay: false, description:'Un peu de blabla pour test', color: '#7A771D' },
+        { title: 'Click for Google', start: new Date(y, m, 28), end: new Date(y, m, 29), url: 'http://google.com/', description:'Un peu de blabla pour test', color: '#7A771D' }
       ];
 
       /* config object */
@@ -328,8 +397,15 @@
                   center: '',
                   right: 'today prev,next'
               },
-              eventRender: $scope.eventRender
-          }   
+
+              eventRender: $scope.eventRender,
+
+              eventClick:  function(calEvent) {
+              $('#modalTitle').html(calEvent.title);
+              $('#modalBody').html(calEvent.description);
+              $('#fullCalModal').modal();
+              }
+          }
       };
 
       /* event sources array */
@@ -383,16 +459,11 @@
             templateUrl:'partials/news/news.html',
             controller: 'newsController'
         })
-        .when('/mentions', {
-            templateUrl:'partials/mentions/mentions.html',
-            controller: 'mentionsController'
-        })
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
             /**controllerAs: **/
         });
-
         }]);
     /*********************fin route***************/
 
