@@ -1,101 +1,92 @@
 
-<div class="container " style="margin-top: 150px;">
-    <div class="row">
-			<div class="well fixed col-md-2">
-			<form id="attributeForm" method="post" class="form-horizontal"
-			    data-bv-message="This value is not valid"
-			    data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
-			    data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
-			    data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
-					<legend>Contactez nous !</legend>
-					<div class="form-group">
-					  <label class="col-md-4 control-label">First Name</label>
-					  <div class="col-md-12 inputGroupContainer">
-					  <div class="input-group">
-					  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" class="form-control" name="firstName" placeholder="Prénom"
-								data-bv-notempty="true"
-								data-bv-notempty-message="The last name is required and cannot be empty" />					    </div>
-					  </div>
-					</div>
+<div class="container ">
+  <div class="row ">
 
-					<div class="form-group">
-					  <label class="col-md-4 control-label">First Name</label>
-					  <div class="col-md-12 inputGroupContainer">
-					  <div class="input-group">
-					  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-						<input type="text" class="form-control" name="lastName" placeholder="Nom de famille"
-								data-bv-notempty="true"
-								data-bv-notempty-message="The last name is required and cannot be empty" />					    </div>
-					  </div>
-					</div>
+    <!-- Button trigger modal -->
+    <div class="btn-group col-md-offset-5">
+      <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Nous contacter ! <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" style="width:100%;">
+        <li><a data-toggle="modal" data-target="#myModal" style="cursor:pointer;">Via le site</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Vous même</a></li>
+      </ul>
+    </div>
+  </br></br>
 
-					<div class="form-group">
-					  <label class="col-md-4 control-label">First Name</label>
-					  <div class="col-md-12 inputGroupContainer">
-					  <div class="input-group">
-					  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-						<input type="email" class="form-control" name="email" placeholder="E-mail"
-								data-bv-notempty="true"
-								data-bv-notempty-message="The last name is required and cannot be empty" />					    </div>
-					  </div>
-					</div>
+    <!-- FORMULAIRE -->
+    <div class="formContact modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div data-ng-controller="FormController" class="modal-dialog" role="document">
+        <div class="well modal-content">
+          <div class="modal-header" style="padding:0;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h3 class="modal-title">Veuillez remplir le formulaire</h3>
+          </div>
+          <div class="modal-body">
+            <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+            <div data-ng-show="progress.active()" style="color: red; font-size: 50px;">Sending&hellip;</div>
+            <form name="FormControllerForm" novalidate role="form">
+              <div class="form-group">
+                <span class="label label-danger" data-ng-show="submitted && FormControllerForm.name.$error.required">Champ requis !</span>
+                <input type="text" placeholder="Prénom" name="name" data-ng-model="name" class="form-control" required />
+              </div>
 
-					<div class="form-group">
-					  <label class="col-md-4 control-label">Project Description</label>
-					    <div class="col-md-12 inputGroupContainer">
-					    <div class="input-group">
-					        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-					        	<textarea class="form-control" name="comment" placeholder="Message"></textarea>
-					  </div>
-					  </div>
-					</div>
+              <div class="form-group">
+                <span class="label label-danger" data-ng-show="submitted && FormControllerForm.lastName.$error.required">Champ requis !</span>
+                <input type="text" placeholder="Nom" name="lastName" data-ng-model="lastName" class="form-control" required />
+              </div>
 
-					<!-- Success message -->
-					<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+              <div class="form-group">
+                <span class="label label-danger" data-ng-show="submitted && FormControllerForm.email.$error.required">Champ requis !</span>
+                <span class="label label-danger" data-ng-show="submitted && FormControllerForm.$error.email">E-mail invalide !</span>
+                <input type="email" placeholder="E-mail" name="email" data-ng-model="email" class="form-control" required />
+              </div>
 
-					<!-- Button -->
-					<div class="form-group">
-						<label class="col-md-12 control-label"></label>
-						<div class="col-md-12">
-							<button type="submit" class="btn btn-warning col-md-12" >Envoyer <span class="glyphicon glyphicon-send"></span></button>
-						</div>
-					</div>
-				</div>
+              <div class="form-group">
+                <span class="label label-danger" data-ng-show="submitted && FormControllerForm.comments.$error.required">Champ requis !</span>
+                <textarea name="comments" placeholder="Taper votre message" data-ng-model="comments" class="form-control max" required></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button data-ng-disabled="progress.active()" data-ng-click="submit(FormControllerForm)" class="btn btn-warning col-md-4 col-md-offset-4">Envoyer <span class="glyphicon glyphicon-send"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-			</form>
+  <div class="row">
+    <div id="map" class="well padreset col-md-12" data-placement="top" data-trigger="focus" data-toggle="popover" data-content="Cliquez sur un marqueur pour plus d'info"></div>
+  </div>
 
-			<div id="map" class="well padreset col-md-8 col-md-offset-4 " data-placement="bottom" data-trigger="focus" data-toggle="popover" data-content="Cliquez sur un marqueur pour plus d'info"></div>
-
-		</div>
-	</div>
-
-		<div class="row">
-			<div class="well col-md-8 col-md-offset-4 dojoCH" >
-				<img src='../../img/news.jpeg' class="img-responsive"></img>
-				<h1>DOJO CHARTRES</h1>
-				<p>Maecenas tristique nibh ut odio pulvinar consequat. Vivamus a massa non mi sollicitudin molestie. Duis condimentum tincidunt nisl, pharetra accumsan augue varius sed. Pellentesque vehicula cursus commodo. Quisque bibendum turpis ut porttitor tincidunt. Proin eget venenatis risus. Fusce commodo quis nunc eu finibus. Duis at tortor tellus. Phasellus pretium aliquam dui eu porta. Phasellus urna turpis, fringilla at condimentum eget, consequat vel urna. Donec quis odio dictum, porttitor magna nec, elementum nulla. Maecenas fermentum varius magna vitae vulputate. Maecenas ac malesuada urna, in aliquet nunc. Suspendisse in lectus id metus pulvinar lacinia ut ut eros.</p>
-			</div>
-			<div class="well col-md-8 col-md-offset-4 dojoMV" >
-				<img src='../../img/news.jpeg' class="img-responsive"></img>
-				<h1>DOJO MAINVILLIERS</h1>
-				<p>Maecenas tristique nibh ut odio pulvinar consequat. Vivamus a massa non mi sollicitudin molestie. Duis condimentum tincidunt nisl, pharetra accumsan augue varius sed. Pellentesque vehicula cursus commodo. Quisque bibendum turpis ut porttitor tincidunt. Proin eget venenatis risus. Fusce commodo quis nunc eu finibus. Duis at tortor tellus. Phasellus pretium aliquam dui eu porta. Phasellus urna turpis, fringilla at condimentum eget, consequat vel urna. Donec quis odio dictum, porttitor magna nec, elementum nulla. Maecenas fermentum varius magna vitae vulputate. Maecenas ac malesuada urna, in aliquet nunc. Suspendisse in lectus id metus pulvinar lacinia ut ut eros.</p>
-			</div>
-		</div>
+  <div class="row">
+    <div class="well col-md-12 dojoCH" >
+      <img src='../../img/news.jpeg' style='width:100%;' class="img-responsive"></img>
+      <h1>DOJO CHARTRES</h1>
+      <p>Maecenas tristique nibh ut odio pulvinar consequat. Vivamus a massa non mi sollicitudin molestie. Duis condimentum tincidunt nisl, pharetra accumsan augue varius sed. Pellentesque vehicula cursus commodo. Quisque bibendum turpis ut porttitor tincidunt. Proin eget venenatis risus. Fusce commodo quis nunc eu finibus. Duis at tortor tellus. Phasellus pretium aliquam dui eu porta. Phasellus urna turpis, fringilla at condimentum eget, consequat vel urna. Donec quis odio dictum, porttitor magna nec, elementum nulla. Maecenas fermentum varius magna vitae vulputate. Maecenas ac malesuada urna, in aliquet nunc. Suspendisse in lectus id metus pulvinar lacinia ut ut eros.</p>
+    </div>
+    <div class="well col-md-12 dojoMV" >
+      <img src='../../img/news.jpeg' style='width:100%;' class="img-responsive"></img>
+      <h1>DOJO MAINVILLIERS</h1>
+      <p>Maecenas tristique nibh ut odio pulvinar consequat. Vivamus a massa non mi sollicitudin molestie. Duis condimentum tincidunt nisl, pharetra accumsan augue varius sed. Pellentesque vehicula cursus commodo. Quisque bibendum turpis ut porttitor tincidunt. Proin eget venenatis risus. Fusce commodo quis nunc eu finibus. Duis at tortor tellus. Phasellus pretium aliquam dui eu porta. Phasellus urna turpis, fringilla at condimentum eget, consequat vel urna. Donec quis odio dictum, porttitor magna nec, elementum nulla. Maecenas fermentum varius magna vitae vulputate. Maecenas ac malesuada urna, in aliquet nunc. Suspendisse in lectus id metus pulvinar lacinia ut ut eros.</p>
+    </div>
+  </div>
 </div>
 
-<script>
-$(document).ready(function() {
-		$('.navbar-fixed-top').addClass('animated fadeInDown');
-    $('#attributeForm').bootstrapValidator();
-		$('.fixed').addClass('animated flipInY');
-		$('.alert-success').css('display','none');
-		$('.control-label').css('display','none');
-		$('.dojoCH').css('display','none');
-		$('.dojoMV').css('display','none');
-		$('#map').popover('show');
-		$('.popover').addClass('animated pulse infinite');
-		$('.popover').find('div:first').remove();
-});
-</script>
 
+<script>
+$('#map').click(function(){
+  $(this).popover('hide');
+});
+$('.max').css('height', '100px');
+$('#attributeForm').bootstrapValidator();
+$('.btn-success').animateCss('flipInX');
+$('.alert-success').css('display','none');
+$('.control-label').css('display','none');
+$('.dojoCH').css('display','none');
+$('.dojoMV').css('display','none');
+$('#map').popover('show');
+$('.popover').find('div:first').remove();
+</script>
