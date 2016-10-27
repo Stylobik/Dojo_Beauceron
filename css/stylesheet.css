@@ -384,7 +384,7 @@ h1 {
 }
 
 
-/* Horaires */
+/* Horaires 
 .table_horaires {
 	margin-top:150px;
 }
@@ -407,11 +407,32 @@ h1 {
 
 .col5H{
 	width: 150px;
-}
+}*/
+/* Horaires */
+a{
+		text-decoration:none;
+	}
+	.row-heading{
+		font-weight:500;
+		font-size:.7em;
+		text-transform:uppercase;
+	}
+	.timetable .time-label{
+		font-size:.8em;
+		font-weight:500;
+	}
+	.timetable .time-entry.vip-only{
+		background-color:#C490F5;
+		border:1px solid #6A16B8;
+	}
+	.timetable .time-entry.vip-only:hover{
+		background-color:#AE67F0;
+	}
 
 th{
 	font-weight: bold;
 }
+
 
 #map {
     height: 300px;

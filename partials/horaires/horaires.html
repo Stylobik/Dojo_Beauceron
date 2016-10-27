@@ -1,110 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Vanilla javascript plugin for building nice responsive timetables">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Horaires</title>
+    <link rel="stylesheet" href="../../css/vendor/timetable/timetablejs.css">
+    <link rel="stylesheet" href="../../css/stylesheet.css">
+  </head>
+  <body>
 
-		<div class="container-fluid" ng-controller="planningController as planningCtrl">
-			<div class="row">
-				<div class="col-xs-12">
-				<h3>Horaires 2016-2017</h3>
-				</div>
-			</div>
+    <div class="hero-unit">
+      <h1>Horaires 2016/2017</h1>
+      <p>Dojo</p>
+    </div>
 
-		<div class="container center-block">
-			<table class ="table_horaires table-bordered">
-				<thead>
-					<tr>
-						<th class="col1H"></th>
-						<th colspan = 2>Dojo de Mainvilliers</th>
-						<th colspan = 2>Dojo de la Madeleine</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th class="col1H"></th>
-						<th class="col2H">Horaires</th>
-						<th class="col3H">Né en ...</th>
-						<th class="col4H">Horaires</th>
-						<th class="col5H">Né en ...</th>
-					</tr>
-					<tr>
-						<td rowspan = 3>Lundi</td>
-						<td rowspan = 2>18h15 à 19h30</td>
-						<td rowspan = 2>2002 à 2008</td>
-						<td class="col4H">18h15 à 19h30</td>
-						<td class="col5H">2007 à 2010</td>
-					</tr>
-					<tr>
-						<td class="col4H">19h15 à 20h30</td>
-						<td class="col5H">2002 à 2006</td>
-					</tr>
-					<tr>
-						<td class="col2H">19h30 à 21h00</td>
-						<td class="col3H">2001 et avant - Physique</td>
-						<td class="col4H">20h30 à 22h15</td>
-						<td class="col5H">Taiso</td>
-					</tr>
-					<tr>
-						<td rowspan = 3>Mardi</td>
-						<td class="col2H">17h30 à 18h15</td>
-						<td class="col3H">Baby Judo 2012/2011</td>
-						<td rowspan=3 colspan=2></td>
-					</tr>
-					<tr>
-						<td class="col2H">18h15 à 19h30</td>
-						<td class="col3H">Minimes cadets</td>
-					</tr>
-					<tr>
-						<td class="col2H">19h45 à 21h45</td>
-						<td class="col3H">2001 et avant - Technique</td>
-					</tr>
-					<tr>
-						<td rowspan = 3>Mercredi</td>
-						<td class="col2H">16h00 à 17h00</td>
-						<td class="col3H">2009/2010</td>
-						<td class="col4H">15h00 à 15h45</td>
-						<td class="col5H">Baby Judo 2011/2012</td>
-					</tr>
-					<tr>
-						<td class="col2H">17h00 à 18h00</td>
-						<td class="col3H">2007/2008</td>
-						<td class="col4H">15h45 à 16h45</td>
-						<td class="col5H">2007 à 2010</td>
-					</tr>
-					<tr>
-						<td class="col2H">18h00 à 19h30</td>
-						<td class="col3H">2007/2008</td>
-						<td colspan=2></td>
-					</tr>
-					<tr>
-						<td rowspan = 3>Jeudi</td>
-						<td rowspan = 3 colspan = 2></td>
-						<th colspan = 2>Fontaine-La-Guyon</th>
-					</tr>
-					<tr>
-						<td class="col4H">16h45 à 17h30</td>
-						<td class="col5H">2012, 2011, 2010</td>
-					</tr>
-					<tr>
-						<td class="col4H">17h30 à 18h30</td>
-						<td class="col5H">2009, 2008 et avant</td>
-					</tr>
-					<tr>
-						<td rowspan = 2>Vendredi</td>
-						<td rowspan = 2>20h00 à 21h30</td>
-						<td rowspan = 2>2001 et avant</td>
-						<th colspan = 2>Dojo de la Madeleine</th>
-					</tr>
-					<tr>
-						<td class="col4H">17h30 à 19h00</td>
-						<td class="col5H">Entre 2002 et 2006</td>
-					</tr>
-					<tr>
-						<td rowspan = 2>Samedi</td>
-						<td rowspan = 2>10h00 à 11h30</td>
-						<td rowspan = 2>Cours à thème<br/> Jeunes ou adultes<br/>Sur Réservation</td>
-						<td colspan = 2></td>
-					</tr>
+    <div class="timetable"></div>
+    <script src="../../js/vendor/jquery/jquery.js"></script>
+    <script src="../../js/vendor/timetable/timetable.js"></script>
 
-				</tbody>
-			</table>
-			
-		</div><!--/container center-block -->
+    <script>
+      var timetable = new Timetable();
 
-		</div><!-- /container-fluid -->
+      timetable.setScope(10,22);
+
+      timetable.addLocations(['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']);
+
+      timetable.addEvent('Né entre 2002 et 2008', 'Lundi', new Date(2015,7,17,18,15), new Date(2015,7,17,19,30), { url: '#' });
+      timetable.addEvent('Né en 2001 et avant - Physique', 'Lundi', new Date(2015,7,17,19,30), new Date(2015,7,17,21,00)); // options attribute is not used for this event
+      timetable.addEvent('Baby Judo 2012/2011', 'Mardi', new Date(2015,7,17,17,30), new Date(2015,7,17,18,15), { url: '#' });
+      timetable.addEvent('Minimes Cadets', 'Mardi', new Date(2015,7,17,18,15), new Date(2015,7,17,19,30), { url: '#' });
+      timetable.addEvent('Né en 2001 et avant - Techniques', 'Mardi', new Date(2015,7,17,19,45), new Date(2015,7,17,21,15), { url: '#' });
+      timetable.addEvent('Né en 2009/2010', 'Mercredi', new Date(2015,7,17,16,00), new Date(2015,7,17,17,00), { url: '#' });
+      timetable.addEvent('Né en 2007/2008', 'Mercredi', new Date(2015,7,17,17,00), new Date(2015,7,17,18,00), { url: '#' });
+      timetable.addEvent('Né en 2002 à 2006', 'Mercredi', new Date(2015,7,17,17,00), new Date(2015,7,17,19,30), { url: '#' });
+      
+      timetable.addEvent('Né en 2001 et avant', 'Vendredi', new Date(2015,7,17,20,00), new Date(2015,7,17,21,30)); // options attribute is not used for this event
+
+      timetable.addEvent('Cours à thème - Jeunes ou adultes', 'Samedi', new Date(2015,7,17,10,00), new Date(2015,7,17,11,30), { class: 'vip-only' });
+
+      var renderer = new Timetable.Renderer(timetable);
+      renderer.draw('.timetable');
+    </script>
+
+</body>
+</html>
