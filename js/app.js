@@ -5,9 +5,25 @@
 
 /****************CONTROLLER**************/
 
+app.controller("PannelController",function(){
+    this.tab = 1;
+
+    this.selectTab = function(setTab){
+        this.tab = setTab;
+    };
+
+    this.isSelected = function(checkTab){
+        if(this.tab === checkTab){
+            return true;
+        }
+    }
+});
+
     app.controller('mainController', function () {
 
     });
+
+
 
 
 
@@ -337,16 +353,11 @@
             templateUrl:'partials/news/news.html',
             controller: 'newsController'
         })
-        .when('/mentions', {
-            templateUrl:'partials/mentions/mentions.html',
-            controller: 'mentionsController'
-        })
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
             /**controllerAs: **/
         });
-
         }]);
     /*********************fin route***************/
 
