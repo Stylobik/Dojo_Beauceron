@@ -16,6 +16,7 @@
     </div>
 
     <div class="timetable"></div>
+    <div class="timetable1"></div>
     <script src="../../js/vendor/jquery/jquery.js"></script>
     <script src="../../js/vendor/timetable/timetable.js"></script>
 
@@ -41,6 +42,30 @@
 
       var renderer = new Timetable.Renderer(timetable);
       renderer.draw('.timetable');
+
+/*  SECOND planning*/
+
+      var timetable1 = new Timetable();
+
+      timetable1.setScope(10,22);
+
+      timetable1.addLocations(['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi']);
+
+      timetable1.addEvent('Né entre 2002 et 2008', 'Lundi', new Date(2015,7,17,18,15), new Date(2015,7,17,19,30), { url: '#' });
+      timetable1.addEvent('Né en 2001 et avant - Physique', 'Lundi', new Date(2015,7,17,19,30), new Date(2015,7,17,21,00)); // options attribute is not used for this event
+      timetable1.addEvent('Baby Judo 2012/2011', 'Mardi', new Date(2015,7,17,17,30), new Date(2015,7,17,18,15), { url: '#' });
+      timetable1.addEvent('Minimes Cadets', 'Mardi', new Date(2015,7,17,18,15), new Date(2015,7,17,19,30), { url: '#' });
+      timetable1.addEvent('Né en 2001 et avant - Techniques', 'Mardi', new Date(2015,7,17,19,45), new Date(2015,7,17,21,15), { url: '#' });
+      timetable1.addEvent('Né en 2009/2010', 'Mercredi', new Date(2015,7,17,16,00), new Date(2015,7,17,17,00), { url: '#' });
+      timetable1.addEvent('Né en 2007/2008', 'Mercredi', new Date(2015,7,17,17,00), new Date(2015,7,17,18,00), { url: '#' });
+      timetable1.addEvent('Né en 2002 à 2006', 'Mercredi', new Date(2015,7,17,17,00), new Date(2015,7,17,19,30), { url: '#' });
+
+      timetable1.addEvent('Né en 2001 et avant', 'Vendredi', new Date(2015,7,17,20,00), new Date(2015,7,17,21,30)); // options attribute is not used for this event
+
+      timetable1.addEvent('Cours à thème - Jeunes ou adultes', 'Samedi', new Date(2015,7,17,10,00), new Date(2015,7,17,11,30), { class: 'vip-only' });
+
+      var renderer = new Timetable.Renderer(timetable1);
+      renderer.draw('.timetable1');
     </script>
 
 </body>
