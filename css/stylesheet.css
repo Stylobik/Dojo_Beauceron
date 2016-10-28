@@ -20,11 +20,15 @@ body
 	src:url(../fonts/lane-narrow.ttf);
 }
 
+#logo_img{
+	margin: 0.4rem;
+}
+
 #title_logo{
 	font-family:dekiru;
-	font-size:3rem;
-	margin-left:2rem;
-    margin-top:3rem;
+	font-size: 3rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
 	color:#2e81fa;
 }
 
@@ -243,6 +247,18 @@ p {
 }
 
 /* CALENDRIER */
+
+.fc-event{
+    cursor: pointer; /* on change le curseur au survol des evenements */
+}
+
+.fc-event-time{
+   display : none; /* on retire lheure de debut des evenements */
+}
+
+.fc-time{
+   display : none; /* meme chose qu'avant */
+}
 
 #calendar
 {
@@ -470,4 +486,26 @@ z-index:500;
 
 .btn-success{
 	border-radius: 0;
+}
+
+a{
+    color:#fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#fff;
+}
+
+#news_btn {
+    margin-bottom:15px;
+}
+
+.sport {
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.btn-sport {
+	margin-top:15px;
 }

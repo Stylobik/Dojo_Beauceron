@@ -380,7 +380,7 @@ app.controller("PannelController",function(){
         { id: 999, title: 'Repeating Event', start: new Date(y, m, d - 3, 16, 0), allDay: false, description:'Un peu de blabla pour test', color: '#3A87AD' },
         { id: 999, title: 'Repeating Event', start: new Date(y, m, d + 4, 16, 0), allDay: false, description:'Un peu de blabla pour test', color: '#3A87AD' },
         { title: 'Birthday Party', start: new Date(y, m, d + 1, 19, 0), end: new Date(y, m, d + 1, 22, 30), allDay: false, description:'Un peu de blabla pour test', color: '#7A771D' },
-        { title: 'Click for Google', start: new Date(y, m, 28), end: new Date(y, m, 29), url: 'http://google.com/', description:'Un peu de blabla pour test', color: '#7A771D' }
+        { title: 'Réunion mensuelle', start: new Date(y, m, 28), end: new Date(y, m, 29), description:'Un peu de blabla pour test', color: '#7A771D' }
       ];
 
       /* config object */
