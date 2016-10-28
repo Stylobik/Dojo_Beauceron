@@ -54,10 +54,8 @@ color:black;
     background-color: #2e81fa;
 }
 
-.active {
-	border-bottom: 0.2rem solid #000;
-	height: 0;
-
+.navbar.navbar-default {
+    border: none;
 }
 
 .navbar-default:hover .navbar-nav:hover > .active:hover > a, .navbar-default:hover .navbar-nav:hover > .active:hover > a:focus, .navbar-default:hover .navbar-nav:hover > .active:hover > a:hover {
@@ -70,7 +68,7 @@ color:black;
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
 	background-color: #2e81fa;
     color: #fafafa;
-	height:8.2rem;
+	height:9.2rem;
 }
 
 /* couleur de l'actif par défaut */
@@ -91,6 +89,7 @@ color:black;
 
 .navbar{
 	background-color: white;
+	margin: 0;
 }
 
 ul > li {

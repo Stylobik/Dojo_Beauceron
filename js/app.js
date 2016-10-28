@@ -462,8 +462,11 @@ app.controller("PannelController",function(){
         .when('/resultats', {
             templateUrl:'partials/resultats/resultats.html',
             controller:'resultatsController'
-            /**controllerAs: **/
-        });
+        })
+        .otherwise({
+        	redirectTo: '/'
+        })
+            /**controllerAs: **/  
         }]);
     /*********************fin route***************/
 
