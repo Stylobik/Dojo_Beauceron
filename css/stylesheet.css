@@ -167,7 +167,7 @@ ul > li {
 .titre_page
 {
 	text-align: center;
-	margin-bottom: 2rem;
+	margin: 3rem;
 }
 
 form [title="selecteurs"]
@@ -265,6 +265,28 @@ p {
 	margin: 0 auto;
 	margin-bottom: 5rem;
 }
+
+.cal_legende{
+	text-align: center;
+	margin-bottom: 4rem;
+	width: 75%;
+	color: white;
+	border-radius: 5px;
+}
+
+#cal_legende1{
+	background-color: #BA515C;
+}
+
+#cal_legende2{
+	background-color: #3A87AD;
+}
+
+#cal_legende3{
+	background-color: #7A771D;
+}
+
+/* FIN CALENDRIER */
 
 #historique {
 	padding-top: 2rem;
