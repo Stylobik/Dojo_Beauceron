@@ -256,7 +256,7 @@ app.controller("PannelController",function(){
             podium: [{
                 id: 1,
                 title: "1/4 de finale seniors Orléans - 20 mars 2016 ",
-                images: "/img/resultats.jpg",
+                images: "/img/logo.png",
                 description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
                 },
                 {
