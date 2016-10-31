@@ -216,21 +216,6 @@ app.controller("PannelController",function(){
                 },
                 {
                     date: "2015-2016"
-                },
-                {
-                    date: "2014-2015"
-                },
-                {
-                    date: "2013-2014"
-                },
-                {
-                    date: "2012-2013"
-                },
-                {
-                    date: "2011-2012"
-                },
-                {
-                    date: "2010-2011"
                 }],
             categories: [{
                 age: "Tous"
@@ -258,15 +243,81 @@ app.controller("PannelController",function(){
                 }],
             podium: [{
                 id: 1,
-                title: "Compétition du 12/06/16",
+                title: "1/4 de finale seniors Orléans - 20 mars 2016 ",
                 images: "/img/resultats.jpg",
                 description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
-            },
+                },
                 {
-                    id: 2,
-                    title: "Compétition du 2/06/16",
-                    images: "/img/resultats.jpg",
-                    description: "Un peu de bla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                id: 2,
+                title: "Tournoi de Voves Benjamins - 20 mars 2016",
+                images: "/img/resultats01.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 3,
+                title: "2ième Grand Prix Benjamins Epernon -13 mars 2016",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 4,
+                title: "1/4 de Finale Juniors - 27 février 2016",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 5,
+                title: "Grand Prix Benjamin Départemental de Saint Georges sur Eure- 31 janvier 2016",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 6,
+                title: "Tournoi de Chateaudun le 06/02/2016",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 7,
+                title: "Tournoi de Dreux par Equipe - 09 janvier 2016",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 8,
+                title: "Le 13 et 14 /12/15 - Championnat de France séniors 2ème division et coupe de France",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 9,
+                title: "Le 29/11/15 - Championnat régional séniors 2ème division",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 10,
+                title: "Le 28/11/15 - Tournoi excellence Minimes d’Orléans",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 11,
+                title: "le 23/10/15 - Coupe de France CADETTE à Ceyrat",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 12,
+                title: "Le 13/10/15 - Coupe départementale cadet à Saint Georges Sur Eure ",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                },
+                {
+                id: 13,
+                title: "20 septembre 2015 - Tournoi JC Grand Rouen",
+                images: "/img/resultats.jpg",
+                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
                 }]
         }];
     });
