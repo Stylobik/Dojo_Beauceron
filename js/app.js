@@ -1,22 +1,11 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker']);
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker','ngSanitize']);
 
     //app.controller('dojoController',function(){
 
 /****************CONTROLLER**************/
 
 app.controller("PannelController",function(){
-    this.tab = 1;
-
-    this.selectTab = function(setTab){
-        this.tab = setTab;
-    };
-
-    this.isSelected = function(checkTab){
-        if(this.tab === checkTab){
-            return true;
-        }
-    }
 });
 
     app.controller('mainController', function () {
@@ -238,7 +227,7 @@ app.controller("PannelController",function(){
     });
         app.controller('newsController', function ($scope) {
     });
-        app.controller('resultatsController', function ($scope) {
+        app.controller('resultatsController', function ($scope,$sce) {
             $scope.resultats = [{
             annee: [{
                 date: "2016-2017"
@@ -274,19 +263,19 @@ app.controller("PannelController",function(){
                 id: 1,
                 title: "1/4 de finale seniors Orléans - 20 mars 2016 ",
                 images: "/img/logo.png",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                description: $sce.trustAsHtml("- 60 kg : -<br/>1er Peter KIERNAN<br/>5ième Tony KIERNAN<br/><br/>- 81 kg : -<br/>3ième Nouar BOUDERGUI<br/><br/>- 100 kg : -<br/>3ième Johanic FERRAND<br/><br/>Tous qualifiés pour les 1/2 finales")
                 },
                 {
                 id: 2,
                 title: "Tournoi de Voves Benjamins - 20 mars 2016",
                 images: "/img/resultats01.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                description: $sce.trustAsHtml("- 34 kg : -<br/>1er : Célian<br/>2ième : Tanguy")
                 },
                 {
                 id: 3,
                 title: "2ième Grand Prix Benjamins Epernon -13 mars 2016",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: "/img/resultats02.jpg",
+                description: $sce.trustAsHtml("Matheo 1er et Amine 2ème.")
                 },
                 {
                 id: 4,

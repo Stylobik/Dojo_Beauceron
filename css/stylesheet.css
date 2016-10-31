@@ -191,6 +191,19 @@ form [title="selecteurs"]
     box-shadow: 0 1rem 1rem #5a5a5a;
 }
 
+.results_frame{
+	min-height: 350px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modale_photo{
+	margin-bottom: 2%;
+}
+
+/* FIN RESULTATS */
+
 .sport_detail {
 	display: none;
 }
