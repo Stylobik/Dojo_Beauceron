@@ -132,8 +132,9 @@ ul > li {
 }
 
 .cap{
+	border:1px solid #2e81fa;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(46, 129, 250, 0.8);
 }
 
 .footer{
@@ -422,7 +423,7 @@ h1 {
 }
 
 
-/* Horaires 
+/* Horaires
 .table_horaires {
 	margin-top:150px;
 }
@@ -509,11 +510,11 @@ z-index:500;
 	border-radius: 0;
 }
 
-.btnews{
+a{
     color:#fff;
 }
 
-.btnews:hover {
+a:hover {
     text-decoration: none;
     color:#fff;
 }
