@@ -75,7 +75,7 @@ app.controller("PannelController",function(){
     });
 
 
-        app.controller('documentsController', function($scope){
+        app.controller('documentsController', function($scope, $location){
             $scope.documents = [
 
             {
@@ -141,6 +141,16 @@ app.controller("PannelController",function(){
                 images: "/documents/Tarif.jpg"
             }
         ];
+            $scope.id = 1;
+            $scope.setId = function(hash){
+                switch(hash){
+                    case 'myCarousel': this.id = 1;break;
+                }
+                //console.log(hash)
+                $location.hash(hash);
+                $location.hash('');
+            }
+
     });
         app.controller('accueilController', function () {
     });
@@ -215,6 +225,13 @@ app.controller("PannelController",function(){
             }
 
     });
+
+
+
+
+
+
+
         app.controller('inscriptionController', function () {
     });
         app.controller('mentionsController', function () {
@@ -449,7 +466,8 @@ app.controller("PannelController",function(){
         })
         .when('/documents', {
             templateUrl:'partials/documents/documents.html',
-            controller:'documentsController'
+            controller:'documentsController',
+            controllerAs : 'storeDocument'
         })
         .when('/historique', {
             templateUrl:'partials/historique/historique.html',
