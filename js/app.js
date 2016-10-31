@@ -201,7 +201,19 @@ app.controller("PannelController",function(){
     });
         app.controller('historiqueController', function () {
     });
-        app.controller('planningController', function () {
+        app.controller('planningController', function ($scope,$location) {
+            $scope.tab = 1;
+            $scope.setTab = function(hash){
+                switch(hash){
+                    case 'mainvilliers': this.tab = 1;break;
+                    case 'madeleine': this.tab = 2;break;
+                    case 'fontaine' : this.tab = 3;break;
+                }
+                //console.log(hash)
+                $location.hash(hash);
+                $location.hash('');
+            }
+
     });
         app.controller('inscriptionController', function () {
     });
@@ -496,7 +508,8 @@ app.controller("PannelController",function(){
         })
         .when('/horaires', {
             templateUrl:'partials/horaires/horaires.html',
-            controller: 'planningController'
+            controller: 'planningController',
+            controllerAs : 'storePlanning'
         })
         .when('/inscription', {
             templateUrl:'partials/inscription/Inscription_Tarifs.html',
