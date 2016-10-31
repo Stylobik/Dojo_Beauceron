@@ -1,5 +1,5 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker']);
+    var app = angular.module('dojo', ['ngLoadScript','ngRoute', 'ui.calendar', 'ajoslin.promise-tracker']);
 
     //app.controller('dojoController',function(){
 
@@ -75,7 +75,7 @@ app.controller("PannelController",function(){
     });
 
 
-        app.controller('documentsController', function($scope, $location){
+        app.controller('documentsController', function($scope){
             $scope.documents = [
 
             {
@@ -141,16 +141,6 @@ app.controller("PannelController",function(){
                 images: "/documents/Tarif.jpg"
             }
         ];
-            $scope.id = 1;
-            $scope.setId = function(hash){
-                switch(hash){
-                    case 'myCarousel': this.id = 1;break;
-                }
-                //console.log(hash)
-                $location.hash(hash);
-                $location.hash('');
-            }
-
     });
         app.controller('accueilController', function () {
     });
@@ -211,32 +201,45 @@ app.controller("PannelController",function(){
     });
         app.controller('historiqueController', function () {
     });
-        app.controller('planningController', function ($scope,$location) {
-            $scope.tab = 1;
-            $scope.setTab = function(hash){
-                switch(hash){
-                    case 'mainvilliers': this.tab = 1;break;
-                    case 'madeleine': this.tab = 2;break;
-                    case 'fontaine' : this.tab = 3;break;
-                }
-                console.log(hash)
-                $location.hash(hash);
-                $location.hash('');
-            }
-
+        app.controller('planningController', function () {
     });
-
-
-
-
-
-
-
         app.controller('inscriptionController', function () {
     });
         app.controller('mentionsController', function () {
     });
-        app.controller('newsController', function ($scope) {
+        app.controller('newsController', function($scope) {
+          $scope.newslist = [
+            {
+            titre : "TITRE NEWS 1",
+            img : "../../img/photo3.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 2",
+            img : "../../img/slide1.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 3",
+            img : "../../img/slide2.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 4",
+            img : "../../img/slide2.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 5",
+            img : "../../img/photo3.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 6",
+            img : "../../img/slide1.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'}
+          ];
     });
         app.controller('resultatsController', function ($scope) {
             $scope.resultats = [{
@@ -466,8 +469,7 @@ app.controller("PannelController",function(){
         })
         .when('/documents', {
             templateUrl:'partials/documents/documents.html',
-            controller:'documentsController',
-            controllerAs : 'storeDocument'
+            controller:'documentsController'
         })
         .when('/historique', {
             templateUrl:'partials/historique/historique.html',
@@ -475,8 +477,7 @@ app.controller("PannelController",function(){
         })
         .when('/horaires', {
             templateUrl:'partials/horaires/horaires.html',
-            controller: 'planningController',
-            controllerAs : 'storePlanning'
+            controller: 'planningController'
         })
         .when('/inscription', {
             templateUrl:'partials/inscription/Inscription_Tarifs.html',
@@ -497,7 +498,7 @@ app.controller("PannelController",function(){
         .otherwise({
         	redirectTo: '/'
         })
-            /**controllerAs: **/  
+            /**controllerAs: **/
         }]);
     /*********************fin route***************/
 

@@ -4,13 +4,13 @@
             <img src="{{photos.images}}" alt="" class="responsive">
             <div class="caption">
                 <p>{{photos.title}}</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".result1"><span
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="{{'.result1'+$index}}"><span
                         class="glyphicon glyphicon-plus" aria-hidden="true"></span> Voir plus
                 </button>
             </div>
         </div>
     </div>
-    <div class="modal fade result1" tabindex="-1" role="dialog" aria-labelledby="result1">
+    <div ng-repeat="photos in resultat.podium" class="modal fade {{'result1'+$index}}" tabindex="-1" role="dialog" aria-labelledby="result1">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="thumbnail text-center">
@@ -21,6 +21,7 @@
                     <div class="caption">
                         <p>Le podium</p>
                         <img src="{{photos.images}}" alt="" class="responsive">
+                        <!-- <img src="{{photos.description}}" alt=""> -->
                         <p class="alert alert-info">{{photos.description}}</p>
 
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span
