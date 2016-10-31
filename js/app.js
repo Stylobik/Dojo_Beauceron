@@ -209,7 +209,7 @@ app.controller("PannelController",function(){
                     case 'madeleine': this.tab = 2;break;
                     case 'fontaine' : this.tab = 3;break;
                 }
-                //console.log(hash)
+                console.log(hash)
                 $location.hash(hash);
                 $location.hash('');
             }
