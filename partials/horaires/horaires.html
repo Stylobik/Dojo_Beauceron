@@ -1,15 +1,6 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Vanilla javascript plugin for building nice responsive timetables">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Horaires</title>
-    <link rel="stylesheet" href="../../css/vendor/timetable/timetablejs.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/stylesheet.css">
-  </head>
-  <body>
+
+   <!-- <link rel="stylesheet" href="../../css/vendor/timetable/timetablejs.css">-->
+
 
     <div class="hero-unit">
       <h1>Horaires 2016/2017</h1>
@@ -18,25 +9,23 @@
 <div class="container">
   <h3>Choisir le dojo</h3>
   <ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="#mainvilliers">Mainvilliers</a></li>
-    <li><a data-toggle="pill" href="#madeleine">La Madeleine</a></li>
-    <li><a data-toggle="pill" href="#fontaine">Fontaine la Guyon</a></li>
+    <li class="active"><a target="_self" data-toggle="tab" href="#mainvilliers">Mainvilliers</a></li>
+    <li ><a target="_self" data-toggle="tab"  href="#madeleine">La Madeleine</a></li>
+    <li ><a target="_self" data-toggle="tab" href="#fontaine">Fontaine la Guyon</a></li>
   </ul>
   
   <div class="tab-content">
-    <div class="timetable tab-pane fade in active" id="mainvilliers"></div>
-    <div class="timetable1 tab-pane fade" id="madeleine"></div>
-    <div class="timetable2 tab-pane fade" id="fontaine"></div>
+    <div class="timetable tab-pane fade in active" target="_self" id="mainvilliers"></div>
+    <div class="timetable1 tab-pane fade" target="_self" id="madeleine"></div>
+    <div class="timetable2 tab-pane fade" target="_self" id="fontaine"></div>
 </div>
 </div>
 
-    <script src="../../js/vendor/jquery/jquery.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../../js/vendor/timetable/timetable.js"></script>
 
     <script>
-      var timetable = new Timetable();
+   (function(){
+     var timetable = new Timetable();
 
       timetable.setScope(10,22);
 
@@ -92,8 +81,9 @@
 
       var renderer = new Timetable.Renderer(timetable2);
       renderer.draw('.timetable2');
-
+    })();
     </script>
+
 </div>
 </body>
 </html>

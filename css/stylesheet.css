@@ -509,11 +509,11 @@ z-index:500;
 	border-radius: 0;
 }
 
-a{
+.btnews{
     color:#fff;
 }
 
-a:hover {
+.btnews:hover {
     text-decoration: none;
     color:#fff;
 }
