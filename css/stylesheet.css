@@ -422,32 +422,6 @@ h1 {
 	text-align: center;
 }
 
-
-/* Horaires
-.table_horaires {
-	margin-top:150px;
-}
-
-.col1H{
-	width:80px;
-}
-
-.col2H{
-	width: 150px;
-}
-
-.col3H{
-	width: 150px;
-}
-
-.col4H{
-	width: 150px;
-}
-
-.col5H{
-	width: 150px;
-}*/
-/* Horaires */
 a{
 		text-decoration:none;
 	}
@@ -510,11 +484,11 @@ z-index:500;
 	border-radius: 0;
 }
 
-a{
+.btnews{
     color:#fff;
 }
 
-a:hover {
+.btnews:hover {
     text-decoration: none;
     color:#fff;
 }
