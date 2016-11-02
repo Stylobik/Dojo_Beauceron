@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="photos in resultat.podium">
         <div class="thumbnail text-center results_frame">
-            <img src="{{photos.images}}" alt="" class="responsive">
+            <img ng-src="{{photos.images[0]}}" alt="" class="responsive">
             <div class="caption">
                 <p>{{photos.title}}</p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="{{'.result1'+$index}}"><span
@@ -19,10 +19,9 @@
                     </h2>
 
                     <div class="caption">
-                        <p>Le podium</p>
-                        <img src="{{photos.images}}" alt="" class="responsive">
+                        <img ng-repeat="img in photos.images" ng-src="{{img}}" alt="" class="responsive modale_photo">
                         <!-- <img src="{{photos.description}}" alt=""> -->
-                        <p class="alert alert-info">{{photos.description}}</p>
+                        <p class="alert alert-info" ng-bind-html="photos.description"></p>
 
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span
                                 class="glyphicon glyphicon-remove" aria-hidden="true"> Fermer</span></button>
