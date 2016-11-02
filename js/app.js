@@ -319,30 +319,29 @@ app.controller("PannelController",function(){
     });
         app.controller('resultatsController', function ($scope,$sce) {
             $scope.resultats = [{
-            annee: [{
-                date: "2016-2017"
+            annee: [
+                {
+                    date: "2016 - 2017"
                 },
                 {
-                    date: "2015-2016"
+                    date: "2015 - 2016"
+                }
+            ],
+            genders: [
+                {
+                    sexe : "Tous"
                 },
                 {
-                    date: "2014-2015"
+                    sexe : "Homme"
                 },
                 {
-                    date: "2013-2014"
-                },
+                    sexe : "Femme"
+                }
+            ],
+            categories: [
                 {
-                    date: "2012-2013"
-                },
-                {
-                    date: "2011-2012"
-                },
-                {
-                    date: "2010-2011"
-                }],
-            categories: [{
                 age: "Tous"
-            },
+                },
                 {
                     age: "Poussins"
                 },
@@ -363,8 +362,10 @@ app.controller("PannelController",function(){
                 },
                 {
                     age: "Vétérans"
-                }],
-            podium: [{
+                }
+            ],
+            podium: [
+                {
                 id: 1,
                 year: "2015 - 2016",
                 sex: ["Tous", "Homme"],

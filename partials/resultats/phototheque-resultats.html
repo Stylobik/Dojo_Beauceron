@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="photos in resultat.podium">
+    <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="photos in resultat.podium | filter : anos | filter : genre | filter : cat">
         <div class="thumbnail text-center results_frame">
             <img ng-src="{{photos.images[0]}}" alt="" class="responsive">
             <div class="caption">
