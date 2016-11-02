@@ -104,7 +104,7 @@ ul > li {
  }
 
  .carousel-inner {
- 	height:500px;
+
  }
 
 .discipline{
@@ -134,7 +134,7 @@ ul > li {
 .cap{
 	border:1px solid #1177bb;
 	text-align: center;
-	background-color: #70add6;
+ background-color: rgba(112, 173, 214, 0.8);
 }
 
 .footer{
@@ -262,6 +262,14 @@ p {
 	padding: 1rem;
 }
 
+.title_inscription{
+	margin-top: 3%;
+}
+
+.title_horaires{
+	margin-top: 3%;
+}
+
 /* CALENDRIER */
 
 .fc-event{
@@ -317,7 +325,7 @@ p {
 
 /* Carousel Documents */
 .carousel-control {
-  padding-top:10%;
+	z-index: 999;
   width:5%;
 }
 
