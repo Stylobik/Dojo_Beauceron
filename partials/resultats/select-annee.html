@@ -1,7 +1,7 @@
 <div class="col-xs-offset-3 col-xs-2 text-center">
     <form method="post" action="resultats.html">
             <label for="annee">Année</label><br/>
-            <select name="annee" id="annee" title="selecteurs">
+            <select ng-model="anos" ng-init="anos='2015 - 2016'" name="annee" id="annee" title="selecteurs">
                 <option ng-repeat="annees in resultat.annee" value="{{annees.date}}">{{annees.date}}</option>
             </select>
     </form>

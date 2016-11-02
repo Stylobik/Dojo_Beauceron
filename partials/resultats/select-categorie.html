@@ -1,7 +1,7 @@
 <div class="col-xs-2 text-center">
     <form method="post" action="resultats.html">
             <label for="annee">Catégorie</label><br />
-            <select name="annee" id="annee" class="annee" title="selecteurs">
+            <select ng-model="cat" ng-init="cat='Tous'" name="annee" id="annee" class="annee" title="selecteurs">
                 <option ng-repeat="categorie in resultat.categories" value="{{categorie.age}}">{{categorie.age}}</option>
             </select>
     </form>
