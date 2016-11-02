@@ -1,98 +1,28 @@
-<div class="container">
+<div class="container" ng-controller='newsController' style='padding:30px;'>
 	<div class="row">
-		<div class="news col-md-4">
-			<img src="../../img/slide1.jpg" data-target=".myToggle1" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle1 cap">
-				<h3>TITRE NEWS</h3>
+		<div id="{{'news'+$index}}" class="news col-md-4" ng-repeat="news in newslist">
+			<img src="{{news.img}}" data-target="{{'.myToggle'+$index}}" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
+			<div class="{{'myToggle'+$index}} cap">
+				<h3 style='color:#000;'>{{news.titre}}</h3>
 				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
+					{{news.texte}}
 				</p>
+				<a href='' data-toggle="modal" data-target="{{'#myModal'+$index}}" style="text-decoration:underline;">{{news.lien}}</a>
 			</div>
 		</div>
-		<div class="news col-md-4">
-			<img src="../../img/slide2.jpg" data-target=".myToggle2" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle2 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-		<div class="news col-md-4">
-			<img src="../../img/photo3.jpg" data-target=".myToggle3" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle3 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="news col-md-4">
-			<img src="../../img/photo3.jpg" data-target=".myToggle4" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle4 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-		<div class="news col-md-4">
-			<img src="../../img/slide1.jpg" data-target=".myToggle5" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle5 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-		<div class="news col-md-4">
-			<img src="../../img/slide2.jpg" data-target=".myToggle6" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle6 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="news col-md-4">
-			<img src="../../img/photo3.jpg" data-target=".myToggle7" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle7 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-		<div class="news col-md-4">
-			<img src="../../img/photo3.jpg" data-target=".myToggle8" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle8 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
-			</div>
-		</div>
-		<div class="news col-md-4">
-			<img src="../../img/photo3.jpg" data-target=".myToggle9" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="myToggle9 cap">
-				<h3>TITRE NEWS</h3>
-				<p style='text-align:left; color:#fff;'>
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-					Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.
-				</p>
+		<div class="formContact modal fade" style='margin-top:20px;' ng-repeat="news in newslist" id="{{'myModal'+$index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="well modal-content col-md-4 col-md-offset-4">
+				<div class="modal-header" style="padding:0;">
+					<img src="{{news.img}}" class="img-responsive">
+					<h3 style='text-align:center;'>{{news.titre}}</h3>
+				</div>
+				<div class="modal-body">
+					<p>{{news.texte}}</p>
+				</div>
+				<div class="modal-footer"></div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript-lazy" src="../../js/caption.js"></script>

@@ -132,8 +132,9 @@ ul > li {
 }
 
 .cap{
+	border:1px solid #2e81fa;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(46, 129, 250, 0.8);
 }
 
 .footer{
@@ -437,32 +438,6 @@ h1 {
 	text-align: center;
 }
 
-
-/* Horaires 
-.table_horaires {
-	margin-top:150px;
-}
-
-.col1H{
-	width:80px;
-}
-
-.col2H{
-	width: 150px;
-}
-
-.col3H{
-	width: 150px;
-}
-
-.col4H{
-	width: 150px;
-}
-
-.col5H{
-	width: 150px;
-}*/
-/* Horaires */
 a{
 		text-decoration:none;
 	}

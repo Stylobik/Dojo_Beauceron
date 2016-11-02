@@ -1,5 +1,63 @@
 (function(){
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker','ngSanitize']);
+
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker','ngSanitize', 'ngLoadScript']);
+
+    /**************route***************/
+    app.config(['$routeProvider',function($routeProvider){
+        $routeProvider
+        .when('/', {
+            templateUrl:'partials/accueil/accueil.html',
+            controller: 'accueilController',
+            controllerAs: 'accueilCtrl'
+        })
+        .when('/accueil', {
+            templateUrl:'partials/accueil/accueil.html',
+            controller: 'accueilController',
+            controllerAs: 'accueilCtrl'
+        })
+        .when('/calendrier', {
+            templateUrl:'partials/calendrier/calendrier.html',
+            controller: 'calendarEvents'
+        })
+        .when('/contact', {
+            templateUrl:'partials/contact/contact.html',
+            controller: 'FormController'
+        })
+        .when('/documents', {
+            templateUrl:'partials/documents/documents.html',
+            controller:'documentsController'
+        })
+        .when('/historique', {
+            templateUrl:'partials/historique/historique.html',
+            controller: 'historiqueController'
+        })
+        .when('/horaires', {
+            templateUrl:'partials/horaires/horaires.html',
+            controller: 'planningController'
+        })
+        .when('/inscription', {
+            templateUrl:'partials/inscription/Inscription_Tarifs.html',
+            controller:'inscriptionController'
+        })
+        .when('/mentions', {
+            templateUrl:'partials/mentions/mentions.html',
+            controller:'mentionsController'
+        })
+        .when('/news', {
+            templateUrl:'partials/news/news.html',
+            controller: 'newsController'
+        })
+        .when('/resultats', {
+            templateUrl:'partials/resultats/resultats.html',
+            controller:'resultatsController'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+            /**controllerAs: **/
+        }]);
+    /*********************fin route***************/
+
 
     //app.controller('dojoController',function(){
 
@@ -8,13 +66,20 @@
 app.controller("PannelController",function(){
 });
 
-    app.controller('mainController', function () {
-
+    app.controller('mainController', function ($scope,$location) {
+        $scope.id = 1;
+        $scope.setId = function(hash){
+            switch(hash){
+                case 'carousel-example-generic': this.id = 1;break;
+                case 'judo': this.id = 2;break;
+                case 'jujitsu': this.id = 3;break;
+                case 'taiso': this.id = 4;break;
+            }
+            console.log(hash)
+            $location.hash(hash);
+            $location.hash('');
+        }
     });
-
-
-
-
 
     app.controller('LiensCtrl', function($scope){
         $scope.liens = [{
@@ -64,7 +129,7 @@ app.controller("PannelController",function(){
     });
 
 
-        app.controller('documentsController', function($scope, $location){
+        app.controller('documentsController', function($scope,$location){
             $scope.documents = [
 
             {
@@ -139,9 +204,9 @@ app.controller("PannelController",function(){
                 $location.hash(hash);
                 $location.hash('');
             }
-
     });
         app.controller('accueilController', function () {
+
     });
         app.controller('FormController', function ($scope, $http, $log, promiseTracker) {
           $scope.submit = function(form) {
@@ -200,32 +265,57 @@ app.controller("PannelController",function(){
     });
         app.controller('historiqueController', function () {
     });
-        app.controller('planningController', function ($scope,$location) {
-            $scope.tab = 1;
-            $scope.setTab = function(hash){
-                switch(hash){
-                    case 'mainvilliers': this.tab = 1;break;
-                    case 'madeleine': this.tab = 2;break;
-                    case 'fontaine' : this.tab = 3;break;
-                }
-                console.log(hash)
-                $location.hash(hash);
-                $location.hash('');
+    app.controller('planningController', function ($scope,$location) {
+        $scope.tab = 1;
+        $scope.setTab = function(hash){
+            switch(hash){
+                case 'mainvilliers': this.tab = 1;break;
+                case 'madeleine': this.tab = 2;break;
+                case 'fontaine' : this.tab = 3;break;
             }
+            console.log(hash)
+            $location.hash(hash);
+            $location.hash('');
+        }
 
     });
-
-
-
-
-
-
-
         app.controller('inscriptionController', function () {
     });
         app.controller('mentionsController', function () {
     });
-        app.controller('newsController', function ($scope) {
+        app.controller('newsController', function($scope) {
+          $scope.newslist = [
+            {
+            titre : "TITRE NEWS 1",
+            img : "../../img/photo3.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 2",
+            img : "../../img/slide1.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 3",
+            img : "../../img/slide2.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 4",
+            img : "../../img/slide2.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 5",
+            img : "../../img/photo3.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'},
+            {
+            titre : "TITRE NEWS 6",
+            img : "../../img/slide1.jpg",
+            texte : "Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat. Etiam fermentum non tellus pellentesque bibendum. Nulla quis lacinia sem. Nullam dictum nisl eget nunc pretium, eget interdum mauris volutpat.",
+            lien : 'en savoir plus'}
+          ];
     });
         app.controller('resultatsController', function ($scope,$sce) {
             $scope.resultats = [{
@@ -234,6 +324,21 @@ app.controller("PannelController",function(){
                 },
                 {
                     date: "2015-2016"
+                },
+                {
+                    date: "2014-2015"
+                },
+                {
+                    date: "2013-2014"
+                },
+                {
+                    date: "2012-2013"
+                },
+                {
+                    date: "2011-2012"
+                },
+                {
+                    date: "2010-2011"
                 }],
             categories: [{
                 age: "Tous"
@@ -341,6 +446,8 @@ app.controller("PannelController",function(){
     });
 
 /************** DIRECTIVES *************/
+
+
     app.directive('liens',function(){
         return {
             restrict : 'EA',
@@ -483,62 +590,5 @@ app.controller("PannelController",function(){
     }]); /* Fin du calendarEvents controller */
 
 /* FIN SCRIPTS CALENDRIER */
-
-
-/**************route***************/
-    app.config(['$routeProvider',function($routeProvider){
-        $routeProvider
-        .when('/', {
-            templateUrl:'partials/accueil/accueil.html',
-            controller: 'accueilController'
-        })
-        .when('/accueil', {
-            templateUrl:'partials/accueil/accueil.html',
-            controller: 'accueilController'
-        })
-        .when('/calendrier', {
-            templateUrl:'partials/calendrier/calendrier.html',
-            controller: 'calendarEvents'
-        })
-        .when('/contact', {
-            templateUrl:'partials/contact/contact.html',
-            controller: 'FormController'
-        })
-        .when('/documents', {
-            templateUrl:'partials/documents/documents.html',
-            controller:'documentsController',
-            controllerAs : 'storeDocument'
-        })
-        .when('/historique', {
-            templateUrl:'partials/historique/historique.html',
-            controller: 'historiqueController'
-        })
-        .when('/horaires', {
-            templateUrl:'partials/horaires/horaires.html',
-            controller: 'planningController',
-            controllerAs : 'storePlanning'
-        })
-        .when('/inscription', {
-            templateUrl:'partials/inscription/Inscription_Tarifs.html',
-            controller:'inscriptionController'
-        })
-        .when('/mentions', {
-            templateUrl:'partials/mentions/mentions.html',
-            controller:'mentionsController'
-        })
-        .when('/news', {
-            templateUrl:'partials/news/news.html',
-            controller: 'newsController'
-        })
-        .when('/resultats', {
-            templateUrl:'partials/resultats/resultats.html',
-            controller:'resultatsController'
-        })
-        .otherwise({
-        	redirectTo: '/'
-        })
-            /**controllerAs: **/  
-        }]);
-    /*********************fin route***************/
 
 })();
