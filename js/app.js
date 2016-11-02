@@ -19,8 +19,19 @@ app.controller("PannelController",function(){
     }
 });
 
-    app.controller('mainController', function () {
-
+    app.controller('mainController', function ($scope,$location) {
+        $scope.id = 1;
+        $scope.setId = function(hash){
+            switch(hash){
+                case 'carousel-example-generic': this.id = 1;break;
+                case 'judo': this.id = 2;break;
+                case 'jujitsu': this.id = 3;break;
+                case 'taiso': this.id = 4;break;
+            }
+            console.log(hash)
+            $location.hash(hash);
+            $location.hash('');
+        }
     });
 
 
@@ -75,7 +86,7 @@ app.controller("PannelController",function(){
     });
 
 
-        app.controller('documentsController', function($scope){
+        app.controller('documentsController', function($scope,$location){
             $scope.documents = [
 
             {
@@ -141,8 +152,18 @@ app.controller("PannelController",function(){
                 images: "/documents/Tarif.jpg"
             }
         ];
+            $scope.id = 1;
+            $scope.setId = function(hash){
+                switch(hash){
+                    case 'myCarousel': this.id = 1;break;
+                }
+                //console.log(hash)
+                $location.hash(hash);
+                $location.hash('');
+            }
     });
         app.controller('accueilController', function () {
+
     });
         app.controller('FormController', function ($scope, $http, $log, promiseTracker) {
           $scope.submit = function(form) {
@@ -201,7 +222,19 @@ app.controller("PannelController",function(){
     });
         app.controller('historiqueController', function () {
     });
-        app.controller('planningController', function () {
+    app.controller('planningController', function ($scope,$location) {
+        $scope.tab = 1;
+        $scope.setTab = function(hash){
+            switch(hash){
+                case 'mainvilliers': this.tab = 1;break;
+                case 'madeleine': this.tab = 2;break;
+                case 'fontaine' : this.tab = 3;break;
+            }
+            console.log(hash)
+            $location.hash(hash);
+            $location.hash('');
+        }
+
     });
         app.controller('inscriptionController', function () {
     });
@@ -455,11 +488,13 @@ app.controller("PannelController",function(){
         $routeProvider
         .when('/', {
             templateUrl:'partials/accueil/accueil.html',
-            controller: 'accueilController'
+            controller: 'accueilController',
+            controllerAs: 'accueilCtrl'
         })
         .when('/accueil', {
             templateUrl:'partials/accueil/accueil.html',
-            controller: 'accueilController'
+            controller: 'accueilController',
+            controllerAs: 'accueilCtrl'
         })
         .when('/calendrier', {
             templateUrl:'partials/calendrier/calendrier.html',
