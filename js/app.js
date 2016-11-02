@@ -304,6 +304,8 @@ app.controller("PannelController",function(){
     });
 
 /************** DIRECTIVES *************/
+
+
     app.directive('liens',function(){
         return {
             restrict : 'EA',
