@@ -1,5 +1,11 @@
+
+<script type="text/javascript" src="/js/vendor/dot/jquery.dotdotdot.min.js"></script>
+<script type="text/javascript" src="/js/vendor/nivo_slider/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
+
+
 <!-- slide -->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" ng-controller="accueilController as accueilCtrl">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators hidden-xs">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -22,11 +28,11 @@
     </div>
 
     <!-- Controls -->
-    <a class="left carousel-control hidden-xs" href="#carousel-example-generic" role="button" data-slide="prev">
+    <a target="_self" class="left carousel-control hidden-xs" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control hidden-xs" href="#carousel-example-generic" role="button" data-slide="next">
+    <a target="_self" class="right carousel-control hidden-xs" href="#carousel-example-generic" role="button" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
@@ -36,6 +42,7 @@
 
            <div class="container">
                 <div class="row">
+
                     <article class="sport col-xs-4" id="judo">
                         <h2 class="text-center">Judo</h2>
                         <img class="discipline img-responsive" src="../../img/Judo.png" alt="">
@@ -225,12 +232,8 @@ En France, le Taïso est affilié à la Fédération Française de Judo Jujitsu 
             </div>
         </div>
         <div class="center-block">
-            <button id="news_btn" class="btn btn-primary center-block"><a class="btnews"href="#news">Voir plus de news</a></button>
+            <button id="news_btn" class="btn btn-primary center-block"><a class="btnews" href="#news">Voir plus de news</a></button>
         </div>
     </div>
 
 </div>
-
-<script src="/js/vendor/dot/jquery.dotdotdot.min.js"></script>
-<script src="/js/vendor/nivo_slider/jquery.nivo.slider.pack.js"></script>
-<script src="/js/script.js"></script>
