@@ -262,6 +262,14 @@ p {
 	padding: 1rem;
 }
 
+.title_inscription{
+	margin-top: 3%;
+}
+
+.title_horaires{
+	margin-top: 3%;
+}
+
 /* CALENDRIER */
 
 .fc-event{
