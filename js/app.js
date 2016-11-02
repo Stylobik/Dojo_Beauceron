@@ -262,80 +262,80 @@ app.controller("PannelController",function(){
             podium: [{
                 id: 1,
                 title: "1/4 de finale seniors Orléans - 20 mars 2016 ",
-                images: "/img/logo.png",
+                images: ["/img/logo.png"],
                 description: $sce.trustAsHtml("- 60 kg : -<br/>1er Peter KIERNAN<br/>5ième Tony KIERNAN<br/><br/>- 81 kg : -<br/>3ième Nouar BOUDERGUI<br/><br/>- 100 kg : -<br/>3ième Johanic FERRAND<br/><br/>Tous qualifiés pour les 1/2 finales")
                 },
                 {
                 id: 2,
                 title: "Tournoi de Voves Benjamins - 20 mars 2016",
-                images: "/img/resultats01.jpg",
+                images: ["/img/resultats01.jpg"],
                 description: $sce.trustAsHtml("- 34 kg : -<br/>1er : Célian<br/>2ième : Tanguy")
                 },
                 {
                 id: 3,
                 title: "2ième Grand Prix Benjamins Epernon -13 mars 2016",
-                images: "/img/resultats02.jpg",
-                description: $sce.trustAsHtml("Matheo 1er et Amine 2ème.")
+                images: ["/img/resultats02.jpg", "/img/resultats03.jpg", "/img/resultats04.jpg", "/img/resultats05.jpg"],
+                description: $sce.trustAsHtml("Photo 1 : Matheo 1er et Amine 2ème.<br/>Photo 2 : 1er : Célian<br/>Photo 3 : 2ième : Mathis<br/>Photo 4 : 1er : Tanguy")
                 },
                 {
                 id: 4,
                 title: "1/4 de Finale Juniors - 27 février 2016",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats06.jpg", "/img/resultats07.jpg"],
+                description: $sce.trustAsHtml("Photo 1 : Laurine BALLESTERO (cadette) : 1ère qualifiée pour les 1/2 finales<br/>Photo 2 : Quentin MARTEAU : 4ème qualifié pour les 1/2 finales<br/>ohamed BANGOURA ALKALY : participation")
                 },
                 {
                 id: 5,
                 title: "Grand Prix Benjamin Départemental de Saint Georges sur Eure- 31 janvier 2016",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats08.jpg", "/img/resultats09.jpg"],
+                description: $sce.trustAsHtml("Photo 1 : 1er Célian<br/>Photo 2 : 1er Tanguy<br/>Merci à Allain et Jean-François")
                 },
                 {
                 id: 6,
                 title: "Tournoi de Chateaudun le 06/02/2016",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats10.jpg", "/img/resultats11.jpg", "/img/resultats12.jpg", "/img/resultats13.jpg"],
+                description: $sce.trustAsHtml("L’équipe finit 2ème, composée de Flora(AUNEAU), Thibault (AUNEAU), Peter, Tony, Johannic, Nouar, Salim")
                 },
                 {
                 id: 7,
                 title: "Tournoi de Dreux par Equipe - 09 janvier 2016",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats14.jpg", "/img/resultats15.jpg", "/img/resultats16.jpg"],
+                description: $sce.trustAsHtml("3ième par Equipe :<br/>Mathis, Tanguy, Célian, Amine, Alexandra et Clément")
                 },
                 {
                 id: 8,
                 title: "Le 13 et 14 /12/15 - Championnat de France séniors 2ème division et coupe de France",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats17.jpg", "/img/resultats18.jpg", "/img/resultats19.jpg"],
+                description: $sce.trustAsHtml("Photo 1 : 5ème : KIERNAN Peter (sur la gauche)<br/>Photo 2 : 3ème : KIERNAN Tony")
                 },
                 {
                 id: 9,
                 title: "Le 29/11/15 - Championnat régional séniors 2ème division",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats20.jpg", "/img/resultats21.jpg"],
+                description: $sce.trustAsHtml("3ème : KIERNAN Peter qualifié au championnat de France 2ème division<br/>3ème :KIERNAN Tony qualifié à la coupe de France<br/>2ème : BOUDERGUI Salim qualifié au championnat de France 2ème division")
                 },
                 {
                 id: 10,
                 title: "Le 28/11/15 - Tournoi excellence Minimes d’Orléans",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats22.jpg", "/img/resultats23.jpg"],
+                description: $sce.trustAsHtml("3ème:CHEVEREAU Julie qualifiée au tournoi de France Cadet.")
                 },
                 {
                 id: 11,
                 title: "le 23/10/15 - Coupe de France CADETTE à Ceyrat",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats24.jpg"],
+                description: $sce.trustAsHtml("Participation de BALLESTERO Laurine")
                 },
                 {
                 id: 12,
                 title: "Le 13/10/15 - Coupe départementale cadet à Saint Georges Sur Eure ",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats25.jpg"],
+                description: $sce.trustAsHtml("1ère : Laurine BALLESTERO qualifiée à la coupe de France à Ceyrat<br/>3ème : Ronan KUBIAC")
                 },
                 {
                 id: 13,
                 title: "20 septembre 2015 - Tournoi JC Grand Rouen",
-                images: "/img/resultats.jpg",
-                description: "Un peu de blabla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet est rem repudiandae magni"
+                images: ["/img/resultats26.jpg"],
+                description: $sce.trustAsHtml("L’équipe senior du Dojo Beauceron fini 5ième au tournoi Grand Rouen Equipe composée de :<br/>-60 kg : KIERNAN Peter<br/>-73 kg : KIERNAN Tony<br/>-81 kg : BOUDERGUI Nouar<br/>-90 kg : BOUDERGUI Salim<br/>+90 kg : FERRAND Johanic")
                 }]
         }];
     });
