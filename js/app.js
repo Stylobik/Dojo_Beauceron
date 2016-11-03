@@ -1,7 +1,9 @@
 
 (function(){
 
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker','ngSanitize', 'ngLoadScript']);
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', /*'ajoslin.promise-tracker',*/'ngSanitize']);
+
+
 
     /**************route***************/
     app.config(['$routeProvider',function($routeProvider){
