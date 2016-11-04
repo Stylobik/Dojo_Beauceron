@@ -1,13 +1,10 @@
 <div class="container" ng-controller='newsController' style='padding:30px;'>
 	<div class="row">
-		<div id="{{'news'+$index}}" class="news col-md-4" ng-repeat="news in newslist">
-			<img src="{{news.img}}" data-target="{{'.myToggle'+$index}}" cap-effect="fade" cap-speed="300" class="hcaption img-responsive">
-			<div class="{{'myToggle'+$index}} cap">
-				<h3 style='color:#000;'>{{news.titre}}</h3>
-				<p style='text-align:left; color:#fff;'>
-					{{news.texte}}
-				</p>
-				<a href='' data-toggle="modal" data-target="{{'#myModal'+$index}}" style="text-decoration:underline;">{{news.lien}}</a>
+		<div id="{{'news'+$index}}" class="news hovereffect col-md-4" ng-repeat="news in newslist">
+			<img src="{{news.img}}" data-target="{{'.myToggle'+$index}}" class="img-responsive">
+			<div class="{{'myToggle'+$index}} overlay">
+				<h2>{{news.titre}}</h2>
+				<p style='margin-top:30%;'><a href='' data-toggle="modal" data-target="{{'#myModal'+$index}}" class="info">{{news.lien}}</a></p>
 			</div>
 		</div>
 		<div class="formContact modal fade" style='margin-top:20px;' ng-repeat="news in newslist" id="{{'myModal'+$index}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -24,5 +21,3 @@
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript-lazy" src="../../js/caption.js"></script>
