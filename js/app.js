@@ -68,17 +68,22 @@ app.controller("PannelController",function(){
 });
 
     app.controller('mainController', function ($scope,$location) {
-        $scope.id = 1;
-        $scope.setId = function(hash){
-            switch(hash){
-                case 'carousel-example-generic': this.id = 1;break;
-                case 'judo': this.id = 2;break;
-                case 'jujitsu': this.id = 3;break;
-                case 'taiso': this.id = 4;break;
-            }
-            console.log(hash)
-            $location.hash(hash);
-            $location.hash('');
+            $scope.tab = 1;
+
+            $scope.isActive = function(route) {
+
+                switch(route){
+                    case '/': this.tab = 1;break;
+                    case '/horaires': this.tabMenu = 5;break;
+                    case '/inscription' : this.tabMenu = 5;break;
+                    case '/historique': this.tabMenu = 5;break;
+                    case '/documents' : this.tabMenu = 5;break;
+
+                }
+                //console.log(this.tab);
+                console.log(this.tabMenu);
+                    return route === $location.path();
+
         }
     });
 
