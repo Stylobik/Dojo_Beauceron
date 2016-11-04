@@ -6,7 +6,3 @@ $.fn.extend({
         });
     }
 });
-
-$(window).load(function(){
-  $('.hcaption').hcaptions();
-});

@@ -1,7 +1,7 @@
 
 (function(){
 
-    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', /*'ajoslin.promise-tracker',*/'ngSanitize']);
+    var app = angular.module('dojo', ['ngRoute', 'ui.calendar', 'ajoslin.promise-tracker','ngSanitize']);
 
 
 

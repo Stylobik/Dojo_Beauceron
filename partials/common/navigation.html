@@ -2,7 +2,7 @@
     <div class="container-fluid" ng-controller="PannelController as pannel">
         <!-- Brand and toggle get grouped for better mobile display -->
 
-        <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <div class="navbar-header" style='animation-delay:2s;'> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             <img alt="Brand" class="pull-left" id="logo_img" src="../../img/logo.png">
             <a ng-click="tab = 1" class="navbar-brand" id="title_logo" href="#/accueil">Dojo Beauceron</a>
         </div>
@@ -10,7 +10,7 @@
         <!-- ng-click="selectionLien(accueil)" ng-class="{ active: link == accueil}" -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
+        <div class="collapse navbar-collapse" id="navbar" style='animation-delay:1s;'>
             <ul class="nav navbar-nav pull-right">
                 <li ng-class="{active:tab === 1 }"><a ng-href="#/accueil" ng-click="tab = 1">Accueil</a></li>
                 <li ng-class="{active:tab === 2 }"><a ng-href="#/news" ng-click="tab = 2">Actualités</a></li>
@@ -33,4 +33,13 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-<div id="liseret"></div>
+<div id="liseret" style='animation-delay:1s;'></div>
+
+<script>
+$(document).ready(function(){
+  $('.navbar').animateCss('fadeInDown');
+  $('#liseret').animateCss('slideInLeft');
+  $('.navbar-header').animateCss('fadeIn');
+  $('#navbar').animateCss('slideInLeft');
+});
+</script>
