@@ -82,22 +82,9 @@ app.controller("PannelController",function(){
 });
 
     app.controller('mainController', function ($scope,$location) {
-            $scope.tab = 1;
 
-            $scope.isActive = function(route) {
-
-                switch(route){
-                    case '/': this.tab = 1;break;
-                    case '/horaires': this.tabMenu = 5;break;
-                    case '/inscription' : this.tabMenu = 5;break;
-                    case '/historique': this.tabMenu = 5;break;
-                    case '/documents' : this.tabMenu = 5;break;
-
-                }
-                //console.log(this.tab);
-                console.log(this.tabMenu);
+                    $scope.isActive = function(route) {
                     return route === $location.path();
-
         }
     });
 

@@ -12,15 +12,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar" style='animation-delay:1s;'>
             <ul class="nav navbar-nav pull-right">
-                <li ng-class="{active:isActive('/accueil') || tab === 1}"><a href="#accueil">Accueil</a></li>
+                <li ng-class="{active:isActive('/accueil') || isActive('/')}"><a href="#accueil">Accueil</a></li>
                 <li ng-class="{active:isActive('/news')}"><a href="#news">Actualités</a></li>
                 <li ng-class="{active:isActive('/calendrier')}"><a href="#calendrier">Calendrier</a></li>
-                <li ng-class="{active:tabMenu >= 6}" class="dropdown"><a>Le Club<span class="caret"></span></a>
+                <li ng-class="{active:isActive('/horaires') || isActive('/inscription') || isActive('/historique') || isActive('/documents')}" class="dropdown"><a>Le Club<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li ng-class="{active:isActive('/horaires')}" ng-click="tabMenu = 6"><a href="#horaires">Horaires</a></li>
-                        <li ng-class="{active:isActive('/inscription')}" ng-click="tabMenu = 6"><a href="#inscription">Inscription et Tarifs</a></li>
-                        <li ng-class="{active:isActive('/historique')}" ng-click="tabMenu = 6"><a href="#historique">Historique</a></li>
-                        <li ng-class="{active:isActive('/documents')}" ng-click="tabMenu = 6"><a href="#documents">Documents</a></li>
+                        <li ng-class="{active:isActive('/horaires')}"><a href="#horaires">Horaires</a></li>
+                        <li ng-class="{active:isActive('/inscription')}"><a href="#inscription">Inscription et Tarifs</a></li>
+                        <li ng-class="{active:isActive('/historique')}"><a href="#historique">Historique</a></li>
+                        <li ng-class="{active:isActive('/documents')}"><a href="#documents">Documents</a></li>
                     </ul>
                 </li>
 
