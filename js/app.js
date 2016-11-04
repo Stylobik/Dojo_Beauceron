@@ -64,6 +64,18 @@
 
 /****************CONTROLLER**************/
 
+app.controller("TabbController", function() {
+    this.tabb = 0;
+
+    this.isSet = function(checkTabb) {
+      return this.tabb === checkTabb;
+    };
+
+    this.setTabb = function(setTabb) {
+      this.tabb = setTabb;
+    };
+});
+
 app.controller("PannelController",function(){
 });
 
